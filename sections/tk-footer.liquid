@@ -2,11 +2,7 @@
   <div class="tk-shell tk-footer-grid">
     <div class="tk-footer-brand">
       <a class="tk-brand" href="{{ routes.root_url }}" aria-label="TraceKit home">
-        {% if settings.logo != blank %}
-          {{ settings.logo | image_url: width: 360 | image_tag: class: 'tk-logo', loading: 'lazy' }}
-        {% else %}
-          <span class="tk-mark">≪K</span><span>Trace<span class="blue">Kit</span></span>
-        {% endif %}
+        <img src="{{ 'Tracekit_logo.png' | asset_url }}" class="tk-logo tk-logo-repo" alt="TraceKit" loading="lazy">
       </a>
       <p>One verified truth for every click, customer, and dollar.</p>
       <small>Track. Reconcile. Trust.</small>
