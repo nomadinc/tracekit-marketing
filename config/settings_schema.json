@@ -1,0 +1,17 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "TraceKit Marketing",
+    "theme_version": "1.0.0",
+    "theme_author": "TraceKit"
+  },
+  {
+    "name": "Brand",
+    "settings": [
+      {"type":"image_picker","id":"logo","label":"TraceKit logo"},
+      {"type":"url","id":"demo_url","label":"Book a Demo URL"},
+      {"type":"url","id":"login_url","label":"Login URL"},
+      {"type":"url","id":"overview_url","label":"Overview video URL"}
+    ]
+  }
+]
