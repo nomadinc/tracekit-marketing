@@ -141,3 +141,10 @@
 .platform-ef img{width:auto!important;height:auto!important;max-width:58px!important;max-height:32px!important;object-fit:contain!important}
 .client-row img{object-fit:contain!important}
 @media(max-width:600px){.tk-logo-repo{max-width:145px!important;max-height:36px!important}}
+
+/* Approved static hero artwork */
+.hero-art{position:relative;width:100%;min-width:0;display:flex;align-items:center;justify-content:center;overflow:visible}
+.hero-art img{display:block;width:112%;max-width:none;height:auto;object-fit:contain;filter:drop-shadow(0 0 22px rgba(22,85,255,.08))}
+@media(max-width:1100px){.hero-art img{width:105%}}
+@media(max-width:900px){.hero-art{max-width:760px;margin:4px auto 0}.hero-art img{width:100%}}
+@media(max-width:600px){.hero-art{display:flex!important;margin-top:12px}.hero-art img{width:108%;margin-left:-4%}}
