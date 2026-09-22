@@ -1,32 +1,26 @@
 <section class="hero" id="product"><div class="ambient"></div><div class="tk-shell hero-grid"><div class="reveal"><div class="eyebrow">● THE SOURCE OF TRUTH FOR PERFORMANCE MARKETING</div><h1>How much did you<br><em>actually make</em><br>yesterday?</h1><p class="lead">TraceKit connects every click, customer, and dollar into one verified truth—so businesses understand what happened, why it happened, and what to do next.</p><div class="actions"><a class="btn" href="{{ settings.demo_url | default: '#' }}">Book a Demo →</a><a class="watch" href="{{ settings.overview_url | default: '#' }}">▶ <span>Watch Overview<small>2 min</small></span></a></div><div class="proof"><span>◉ Verified</span><span>◎ Auditable</span><span>⌘ AI-Native</span><span>◇ Built for Performance Marketing</span></div></div><div class="truth-card approved-hero-visual reveal">
-  <div class="approved-streams left-streams"><i></i><i></i><i></i><i></i><i></i><i></i></div>
-  <div class="approved-side approved-inputs">
-    <span>Ads <b>◒</b></span><span>Affiliates <b>⌘</b></span><span>Websites <b>◎</b></span><span>CRMs <b>♙</b></span><span>Checkout <b>▱</b></span><span>More <b>•••</b></span>
-  </div>
-  <div class="approved-core">
-    <div class="approved-core-glow"></div>
-    {% if settings.tracekit_symbol != blank %}
-      {{ settings.tracekit_symbol | image_url: width: 260 | image_tag: class: 'approved-symbol', loading: 'eager' }}
-    {% else %}<span class="core-k">≪K</span>{% endif %}
-  </div>
-  <div class="approved-side approved-outputs">
-    <span><b>◫</b> Sales</span><span><b>↶</b> Refunds</span><span><b>▣</b> Chargebacks</span><span><b>✳</b> Clawbacks</span><span><b>♨</b> Costs</span><span><b>⌁</b> Profit</span>
-  </div>
-  <div class="approved-streams right-streams"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  <svg class="hero-flow-svg" viewBox="0 0 720 430" preserveAspectRatio="none" aria-hidden="true">
+    <defs><linearGradient id="heroBlue" x1="0" x2="1"><stop stop-color="#0878ff"/><stop offset="1" stop-color="#236dff"/></linearGradient><linearGradient id="heroPurple" x1="0" x2="1"><stop stop-color="#315cff"/><stop offset="1" stop-color="#8a31ff"/></linearGradient></defs>
+    <path d="M145 55 C280 55 285 185 342 207"/><path d="M145 116 C280 116 295 190 342 207"/><path d="M145 177 C285 177 305 198 342 207"/><path d="M145 238 C285 238 305 216 342 207"/><path d="M145 299 C280 299 295 224 342 207"/><path d="M145 360 C280 360 285 230 342 207"/>
+    <path class="out" d="M420 207 C480 185 490 55 620 55"/><path class="out" d="M420 207 C480 190 500 116 620 116"/><path class="out" d="M420 207 C485 198 510 177 620 177"/><path class="out" d="M420 207 C485 216 510 238 620 238"/><path class="out" d="M420 207 C480 224 500 299 620 299"/><path class="out" d="M420 207 C480 230 490 360 620 360"/>
+  </svg>
+  <div class="approved-side approved-inputs"><span>Ads <b>◒</b></span><span>Affiliates <b>⌘</b></span><span>Websites <b>◎</b></span><span>CRMs <b>♙</b></span><span>Checkout <b>▱</b></span><span>More <b>•••</b></span></div>
+  <div class="approved-core"><div class="approved-core-glow"></div>{% if settings.tracekit_symbol != blank %}{{ settings.tracekit_symbol | image_url: width: 260 | image_tag: class: 'approved-symbol', loading: 'eager', alt: 'TraceKit' }}{% elsif settings.tracekit_app_icon != blank %}{{ settings.tracekit_app_icon | image_url: width: 260 | image_tag: class: 'approved-symbol approved-app-icon', loading: 'eager', alt: 'TraceKit' }}{% else %}<span class="core-k">TK</span>{% endif %}</div>
+  <div class="approved-side approved-outputs"><span><b>◫</b> Sales</span><span><b>↶</b> Refunds</span><span><b>▣</b> Chargebacks</span><span><b>✳</b> Clawbacks</span><span><b>♨</b> Costs</span><span><b>⌁</b> Profit</span></div>
   <strong class="approved-truth-label">One Verified Truth</strong>
 </div></div></section>
 <section class="logo-strip integrations-v2" id="integrations"><div class="tk-shell">
-  <div class="integration-heading"><div class="kicker">WORKS WITH THE TOOLS YOU ALREADY USE</div><h2>Connect everything. <em>Get one truth.</em></h2><p>TraceKit integrates with the platforms you already use—marketing, attribution, commerce, payments, and more. No rip-and-replace. Just verified data across your stack.</p></div>
+  <p class="integrations-title">Works with the tools you already use.</p>
   <div class="logos logo-lockups" aria-label="Featured TraceKit integrations">
-    <a class="brand-lockup everflow supplied-logo" href="https://www.everflow.io/" aria-label="Everflow">{% if settings.everflow_logo != blank %}{{ settings.everflow_logo | image_url: width: 420 | image_tag: alt: 'Everflow', loading: 'lazy' }}{% else %}<span>EVERFLOW</span>{% endif %}</a>
+    <div class="brand-lockup everflow supplied-logo">{% if settings.everflow_logo != blank %}{{ settings.everflow_logo | image_url: width: 320 | image_tag: alt: 'Everflow', loading: 'lazy' }}{% else %}<span>EVERFLOW</span>{% endif %}</div>
     <a class="brand-lockup shopify" href="https://www.shopify.com/" aria-label="Shopify"><img src="https://cdn.simpleicons.org/shopify/95BF47" alt=""><span>shopify</span></a>
-    <div class="brand-lockup commas supplied-logo" aria-label="Commas">{% if settings.commas_logo != blank %}{{ settings.commas_logo | image_url: width: 360 | image_tag: alt: 'Commas', loading: 'lazy' }}{% else %}<span>COMMAS</span>{% endif %}</div>
+    <div class="brand-lockup commas supplied-logo">{% if settings.commas_logo != blank %}{{ settings.commas_logo | image_url: width: 260 | image_tag: alt: 'Commas', loading: 'lazy' }}{% else %}<span>COMMAS</span>{% endif %}</div>
     <a class="brand-lockup paypal" href="https://www.paypal.com/" aria-label="PayPal"><img src="https://cdn.simpleicons.org/paypal/0070E0" alt=""><span>PayPal</span></a>
-    <a class="brand-lockup checkoutchamp supplied-logo" href="https://checkoutchamp.com/" aria-label="Checkout Champ">{% if settings.checkout_champ_logo != blank %}{{ settings.checkout_champ_logo | image_url: width: 420 | image_tag: alt: 'Checkout Champ', loading: 'lazy' }}{% else %}<span>Checkout Champ</span>{% endif %}</a>
+    <div class="brand-lockup checkoutchamp supplied-logo">{% if settings.checkout_champ_logo != blank %}{{ settings.checkout_champ_logo | image_url: width: 320 | image_tag: alt: 'Checkout Champ', loading: 'lazy' }}{% else %}<span>Checkout Champ</span>{% endif %}</div>
     <a class="brand-lockup meta" href="https://www.meta.com/" aria-label="Meta"><img src="https://cdn.simpleicons.org/meta/0866FF" alt=""><span>Meta</span></a>
     <a class="brand-lockup googleads" href="https://ads.google.com/" aria-label="Google Ads"><img src="https://cdn.simpleicons.org/googleads/4285F4" alt=""><span>Google Ads</span></a>
     <a class="brand-lockup tiktok" href="https://www.tiktok.com/" aria-label="TikTok"><img src="https://cdn.simpleicons.org/tiktok/ffffff" alt=""><span>TikTok</span></a>
-    <a class="more integrations-more" href="/pages/integrations">＋ More Integrations</a>
+    <a class="integrations-more" href="/pages/integrations">+ More</a>
   </div>
 </div></section>
 <section class="section" id="ai"><div class="tk-shell split"><div class="section-copy reveal"><div class="kicker">AI-POWERED INTELLIGENCE</div><h2>Ask your business<br><em>anything.</em></h2><p>Get instant answers in plain English. No digging through disconnected dashboards. Start with the question that matters most.</p></div><div class="chat reveal"><div class="chat-q">◎ <b>How much did I actually make yesterday?</b><small>10:24 AM</small></div><div class="answer"><div class="metric"><div><small>NET PROFIT</small><strong>$48,221</strong></div><div class="up">↑ 11%<small>vs previous day</small></div></div><p>Here's what changed:</p><ul><li>↑ Higher Google ROAS <b>+18%</b></li><li>↓ Refunds decreased <b>-23%</b></li><li>✓ Affiliate 112 paused <b>Impact: +$3,842</b></li></ul><a href="/pages/evidence">See the evidence behind this answer →</a></div><div class="chat-input">Ask anything about your business… <b>→</b></div></div></div></section>
