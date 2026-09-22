@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="{{ request.locale.iso_code }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#05070b">
+  <link rel="canonical" href="{{ canonical_url }}">
+  <title>{{ page_title | default: shop.name }}</title>
+  {{ content_for_header }}
+  {{ 'tracekit.css' | asset_url | stylesheet_tag }}
+  <script src="{{ 'tracekit.js' | asset_url }}" defer></script>
+</head>
+<body class="tk-body">
+  {% section 'tk-header' %}
+  <main id="MainContent">{{ content_for_layout }}</main>
+  {% section 'tk-footer' %}
+</body>
+</html>
