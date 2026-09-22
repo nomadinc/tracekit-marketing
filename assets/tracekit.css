@@ -148,3 +148,11 @@
 @media(max-width:1100px){.hero-art img{width:105%}}
 @media(max-width:900px){.hero-art{max-width:760px;margin:4px auto 0}.hero-art img{width:100%}}
 @media(max-width:600px){.hero-art{display:flex!important;margin-top:12px}.hero-art img{width:108%;margin-left:-4%}}
+
+/* Hero artwork containment correction */
+.hero-grid{grid-template-columns:minmax(0,43fr) minmax(0,57fr)!important;align-items:center!important;gap:42px!important}
+.hero-art{width:100%!important;min-width:0!important;max-width:100%!important;overflow:visible!important;display:flex!important;align-items:center!important;justify-content:center!important}
+.hero-art img{display:block!important;width:100%!important;max-width:100%!important;height:auto!important;max-height:560px!important;object-fit:contain!important;object-position:center!important;margin:0!important;filter:none!important}
+@media(max-width:1100px){.hero-grid{grid-template-columns:minmax(0,46fr) minmax(0,54fr)!important;gap:28px!important}.hero-art img{width:100%!important;max-height:500px!important}}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr!important}.hero-art{max-width:760px!important;margin:18px auto 0!important}.hero-art img{width:100%!important;max-height:none!important}}
+@media(max-width:600px){.hero-art{width:100%!important;margin:14px auto 0!important;overflow:hidden!important}.hero-art img{width:100%!important;max-width:100%!important;margin:0!important}}
