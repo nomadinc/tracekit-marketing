@@ -5,20 +5,20 @@
     <path class="out" d="M420 207 C480 185 490 55 620 55"/><path class="out" d="M420 207 C480 190 500 116 620 116"/><path class="out" d="M420 207 C485 198 510 177 620 177"/><path class="out" d="M420 207 C485 216 510 238 620 238"/><path class="out" d="M420 207 C480 224 500 299 620 299"/><path class="out" d="M420 207 C480 230 490 360 620 360"/>
   </svg>
   <div class="approved-side approved-inputs"><span>Ads <b>◒</b></span><span>Affiliates <b>⌘</b></span><span>Websites <b>◎</b></span><span>CRMs <b>♙</b></span><span>Checkout <b>▱</b></span><span>More <b>•••</b></span></div>
-  <div class="approved-core"><div class="approved-core-glow"></div>{% if settings.tracekit_app_icon != blank %}{{ settings.tracekit_app_icon | image_url: width: 320 | image_tag: class: 'approved-symbol approved-app-icon', loading: 'eager', alt: 'TraceKit' }}{% elsif settings.tracekit_symbol != blank %}{{ settings.tracekit_symbol | image_url: width: 280 | image_tag: class: 'approved-symbol', loading: 'eager', alt: 'TraceKit' }}{% else %}<span class="core-k">TK</span>{% endif %}</div>
+  <div class="approved-core"><div class="approved-core-glow"></div><img src="{{ 'Tracekit_app_icon.png' | asset_url }}" class="approved-symbol approved-app-icon" alt="TraceKit" loading="eager"></div>
   <div class="approved-side approved-outputs"><span><b>◫</b> Sales</span><span><b>↶</b> Refunds</span><span><b>▣</b> Chargebacks</span><span><b>✳</b> Clawbacks</span><span><b>♨</b> Costs</span><span><b>⌁</b> Profit</span></div>
   <strong class="approved-truth-label">One Verified Truth</strong>
 </div></div></section>
 <section class="logo-strip integrations-v2" id="integrations"><div class="tk-shell">
   <p class="integrations-title">Works with the tools you already use.</p>
   <div class="logos logo-lockups" aria-label="Featured TraceKit integrations">
-    <div class="brand-lockup everflow supplied-logo">{% if settings.everflow_logo != blank %}{{ settings.everflow_logo | image_url: width: 320 | image_tag: alt: 'Everflow', loading: 'lazy' }}{% else %}<span>EVERFLOW</span>{% endif %}</div>
+    <div class="brand-lockup everflow supplied-logo"><img src="{{ 'everflow logo.png' | asset_url }}" alt="Everflow" loading="lazy"></div>
     <a class="brand-lockup shopify" href="https://www.shopify.com/" aria-label="Shopify"><img src="https://cdn.simpleicons.org/shopify/95BF47" alt=""><span>shopify</span></a>
-    <div class="brand-lockup commas supplied-logo">{% if settings.commas_logo != blank %}{{ settings.commas_logo | image_url: width: 260 | image_tag: alt: 'Commas', loading: 'lazy' }}{% else %}<span>COMMAS</span>{% endif %}</div>
-    <a class="brand-lockup paypal" href="https://www.paypal.com/" aria-label="PayPal"><img src="https://cdn.simpleicons.org/paypal/0070E0" alt=""><span>PayPal</span></a>
-    <div class="brand-lockup checkoutchamp supplied-logo">{% if settings.checkout_champ_logo != blank %}{{ settings.checkout_champ_logo | image_url: width: 320 | image_tag: alt: 'Checkout Champ', loading: 'lazy' }}{% else %}<span>Checkout Champ</span>{% endif %}</div>
+    <div class="brand-lockup commas supplied-logo"><img src="{{ 'commas.svg' | asset_url }}" alt="Commas" loading="lazy"></div>
+    <a class="brand-lockup paypal" href="https://www.paypal.com/" aria-label="PayPal"><img src="{{ 'PayPal_Symbol_0.svg' | asset_url }}" alt=""><span>PayPal</span></a>
+    <div class="brand-lockup checkoutchamp supplied-logo"><img src="{{ 'checkout-champ.png' | asset_url }}" alt="Checkout Champ" loading="lazy"></div>
     <a class="brand-lockup meta" href="https://www.meta.com/" aria-label="Meta"><img src="https://cdn.simpleicons.org/meta/0866FF" alt=""><span>Meta</span></a>
-    <a class="brand-lockup googleads" href="https://ads.google.com/" aria-label="Google Ads"><img src="https://cdn.simpleicons.org/googleads/4285F4" alt=""><span>Google Ads</span></a>
+    <a class="brand-lockup googleads" href="https://ads.google.com/" aria-label="Google Ads"><img src="{{ 'Google_AdWords_(2).png' | asset_url }}" alt=""><span>Google Ads</span></a>
     <a class="brand-lockup tiktok" href="https://www.tiktok.com/" aria-label="TikTok"><img src="https://cdn.simpleicons.org/tiktok/ffffff" alt=""><span>TikTok</span></a>
     <a class="integrations-more" href="/pages/integrations">+ More</a>
   </div>
@@ -29,13 +29,13 @@
     <span><img src="https://cdn.simpleicons.org/googleads/4285F4" alt="Google Ads"></span>
     <span><img src="https://cdn.simpleicons.org/meta/0866FF" alt="Meta"></span>
     <span><img src="https://cdn.simpleicons.org/tiktok/ffffff" alt="TikTok"></span>
-    <span class="platform-ef">{% if settings.everflow_logo != blank %}{{ settings.everflow_logo | image_url: width: 90 | image_tag: alt: 'Everflow' }}{% else %}E{% endif %}</span>
+    <span class="platform-ef"><img src="{{ 'everflow logo.png' | asset_url }}" alt="Everflow"></span>
     <span><img src="https://cdn.simpleicons.org/shopify/95BF47" alt="Shopify"></span>
     <span class="platform-more">•••</span>
   </div>
   <svg class="approved-connect-lines" viewBox="0 0 760 400" preserveAspectRatio="none"><path d="M125 52 C300 52 295 185 365 200"/><path d="M125 112 C300 112 305 190 365 200"/><path d="M125 172 C300 172 315 195 365 200"/><path d="M125 232 C300 232 315 205 365 200"/><path d="M125 292 C300 292 305 210 365 200"/><path d="M125 352 C300 352 295 215 365 200"/><path d="M430 200 C520 200 520 55 650 55"/><path d="M430 200 C520 200 530 125 650 125"/><path d="M430 200 C520 200 535 200 650 200"/><path d="M430 200 C520 200 530 275 650 275"/><path d="M430 200 C520 200 520 345 650 345"/></svg>
   <div class="approved-connect-core">
-    {% if settings.tracekit_symbol != blank %}{{ settings.tracekit_symbol | image_url: width: 180 | image_tag: class: 'approved-connect-symbol', alt: 'TraceKit' }}{% else %}<span>≪K</span>{% endif %}
+    <img src="{{ 'Tracekit_app_icon.png' | asset_url }}" class="approved-connect-symbol approved-connect-app" alt="TraceKit">
     <b>TraceKit</b><small>Source of Truth</small>
   </div>
   <div class="approved-results"><span><i>⌘</i>Journeys</span><span><i>⌁</i>Attribution</span><span><i>▣</i>Reconciliation</span><span><i>$</i>Profit</span><span><i>◎</i>AI Answers</span></div>
@@ -53,9 +53,9 @@
   <div class="section-copy reveal"><div class="kicker">BUILT FOR HUMANS. DESIGNED FOR AI.</div><h2>Your business,<br><em>now AI-native.</em></h2><p>TraceKit is MCP-compatible out of the box. Connect to any AI assistant and get answers, insights, and recommendations in seconds.</p><a class="text-link" href="/pages/ai">Learn about MCP →</a></div>
   <div class="approved-mcp reveal">
     <div class="approved-clients"><h3>Connect with any MCP client</h3><div class="client-row">
-      <span><img src="https://cdn.simpleicons.org/openai/ffffff" alt="ChatGPT"><b>ChatGPT</b></span>
-      <span><img src="https://cdn.simpleicons.org/anthropic/D97757" alt="Claude"><b>Claude</b></span>
-      <span><img src="https://cdn.simpleicons.org/cursor/ffffff" alt="Cursor"><b>Cursor</b></span>
+      <span><img src="{{ 'ChatGPT_Logo_0.svg' | asset_url }}" alt="ChatGPT"><b>ChatGPT</b></span>
+      <span><img src="{{ 'Claude_AI_symbol.svg' | asset_url }}" alt="Claude"><b>Claude</b></span>
+      <span><img src="{{ 'Cursor_Symbol_0.svg' | asset_url }}" alt="Cursor"><b>Cursor</b></span>
       <span><img src="https://cdn.simpleicons.org/visualstudiocode/007ACC" alt="VS Code"><b>VS Code</b></span>
       <span><img src="https://cdn.simpleicons.org/windsurf/ffffff" alt="Windsurf"><b>Windsurf</b></span>
       <span><i>＋</i><b>More</b></span>
