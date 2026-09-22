@@ -120,3 +120,17 @@
 .integrations-v2 .integrations-more{flex:0 0 auto!important;height:34px!important;padding:0 12px!important;font-size:10px!important;border:1px solid #24436d!important;border-radius:999px!important;display:flex!important;align-items:center!important;justify-content:center!important}
 @media(max-width:1100px){.integrations-v2 .logo-lockups{flex-wrap:wrap!important;justify-content:flex-start!important}.integrations-v2 .brand-lockup{flex:0 0 calc(25% - 16px)!important}.integrations-v2 .integrations-more{flex:0 0 auto!important}}
 @media(max-width:700px){.integrations-v2 .brand-lockup{flex:0 0 calc(50% - 10px)!important;justify-content:flex-start!important}.integrations-v2 .brand-lockup img,.integrations-v2 .supplied-logo img{margin:0!important;max-width:112px!important}.integrations-v2 .integrations-more{margin-top:4px}}
+
+/* Hero fidelity pass — approved mockup */
+.approved-hero-visual{background:radial-gradient(circle at 53% 48%,rgba(14,89,255,.22),transparent 32%)!important}
+.approved-core{width:180px!important;height:180px!important;border-radius:27px!important;border:1px solid #197dff!important;background:linear-gradient(145deg,#07101d,#03070d)!important;box-shadow:0 0 0 2px rgba(24,96,255,.22),0 0 18px rgba(22,118,255,.9),0 0 48px rgba(21,87,255,.62),0 0 72px rgba(72,43,255,.35),inset 0 0 30px rgba(19,88,255,.11)!important}
+.approved-core:before{content:"";position:absolute;inset:-32px;border-radius:48px;background:radial-gradient(circle,rgba(19,110,255,.24),transparent 64%);filter:blur(7px);z-index:-1;animation:heroAura 3.2s ease-in-out infinite}
+.approved-core:after{content:"";position:absolute;inset:-54px;background-image:radial-gradient(circle,#1b86ff 0 1px,transparent 1.5px),radial-gradient(circle,#6044ff 0 1px,transparent 1.5px);background-size:15px 17px,21px 19px;background-position:0 0,8px 5px;mask-image:radial-gradient(circle,#000 0 25%,transparent 68%);opacity:.42;z-index:-1;animation:sparkleDrift 7s linear infinite}
+.approved-core-glow{inset:-20px!important;border:1px solid rgba(57,112,255,.26)!important;box-shadow:0 0 42px rgba(19,107,255,.42)!important}
+.approved-symbol.approved-app-icon{width:126px!important;max-width:126px!important;max-height:126px!important;border-radius:25px!important;filter:drop-shadow(0 0 13px rgba(30,108,255,.35))}
+.hero-flow-svg path{stroke-width:2.6!important;opacity:.96!important;filter:drop-shadow(0 0 5px rgba(14,111,255,.72))!important}.hero-flow-svg path.out{filter:drop-shadow(0 0 5px rgba(107,54,255,.72))!important}
+.approved-side{top:30px!important;bottom:54px!important}.approved-side span{font-size:14px!important;font-weight:700!important;gap:13px!important}.approved-side b{width:34px!important;height:34px!important;font-size:15px!important;background:#0a111b!important;box-shadow:0 0 16px rgba(13,72,150,.12)!important}
+.approved-inputs{left:4px!important}.approved-outputs{right:-2px!important}.approved-truth-label{bottom:6px!important;font-size:18px!important;font-weight:700!important}
+@keyframes heroAura{0%,100%{opacity:.55;transform:scale(.96)}50%{opacity:1;transform:scale(1.05)}}@keyframes sparkleDrift{to{background-position:30px 34px,50px 43px}}
+@media(max-width:1100px){.approved-core{width:165px!important;height:165px!important}.approved-symbol.approved-app-icon{width:112px!important}.approved-side span{font-size:12px!important}.approved-side b{width:30px!important;height:30px!important}}
+@media(prefers-reduced-motion:reduce){.approved-core:before,.approved-core:after{animation:none!important}}
