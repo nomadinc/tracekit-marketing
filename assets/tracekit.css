@@ -75,3 +75,15 @@
  .pillar-head{text-align:left}.pillars-v2{border-top:1px solid #1a2637}.pillars-v2 article{min-height:0;padding:28px 4px 30px}.pillars-v2 article>span{right:4px;top:22px}.pillar-symbol{margin-bottom:22px}.pillars-v2 h3{font-size:21px}
  .final{padding:54px 0}.final-inner{gap:20px}.final .actions{width:100%;margin-top:8px}.tk-footer{padding-top:44px}
 }
+
+/* Integration logo lockups */
+.integrations-v2{padding:56px 0 50px;background:radial-gradient(circle at 25% 40%,rgba(14,70,155,.08),transparent 32%),#05090f}
+.integration-heading{max-width:880px;margin-bottom:34px}.integration-heading h2{font-size:36px;letter-spacing:-.04em;margin:16px 0 12px}.integration-heading p{max-width:780px;color:#8e9aae;line-height:1.65;font-size:14px}
+.logo-lockups{display:grid;grid-template-columns:repeat(9,minmax(0,1fr));gap:18px;align-items:center}
+.brand-lockup{min-width:0;display:flex;align-items:center;justify-content:center;gap:8px;height:52px;color:#f0f3f8;font-size:12px;font-weight:750;white-space:nowrap;opacity:.9}
+.brand-lockup img{width:25px;height:25px;object-fit:contain;flex:0 0 auto}.brand-lockup.shopify img{width:28px;height:28px}.brand-lockup.meta img{width:31px}.brand-lockup.googleads img{width:28px}.brand-lockup.tiktok img{width:24px}
+.brand-lockup.shopify span,.brand-lockup.paypal span{font-size:15px;font-style:italic}.brand-lockup.checkoutchamp span{font-size:11px}.brand-lockup.everflow span,.brand-lockup.commas span{letter-spacing:.08em}
+.commas-mark{position:relative;width:25px;height:25px;display:block}.commas-mark i{position:absolute;left:2px;width:20px;height:6px;border-radius:2px;transform:skew(-22deg);background:linear-gradient(90deg,#0fd2dc,#3577ff)}.commas-mark i:nth-child(1){top:2px}.commas-mark i:nth-child(2){top:10px;left:5px}.commas-mark i:nth-child(3){top:18px;left:8px}.cc-mark{color:#2b82ff;font-size:21px}
+.integrations-more{height:44px;display:flex;align-items:center;justify-content:center;border:1px solid #24436d;border-radius:10px;color:#5fa5ff!important;font-size:10px!important;padding:0 10px!important;white-space:nowrap}
+@media(max-width:1100px){.logo-lockups{grid-template-columns:repeat(5,1fr)}}
+@media(max-width:700px){.integrations-v2{padding:42px 0}.integration-heading h2{font-size:31px}.integration-heading p{font-size:13px}.logo-lockups{grid-template-columns:repeat(2,1fr);gap:8px 14px}.brand-lockup{justify-content:flex-start;height:46px}.integrations-more{justify-content:center}.brand-lockup img{width:23px;height:23px}}
