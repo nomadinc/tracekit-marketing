@@ -15,7 +15,12 @@
       <a href="{{ settings.login_url | default: '#' }}">Log in</a>
       <a class="btn small" href="{{ settings.demo_url | default: '#' }}">Book a Demo →</a>
     </div>
-    <button class="tk-menu" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
+    <button class="tk-menu" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    <div class="tk-mobile-nav" hidden>
+      <a href="#product">Product</a><a href="#solutions">Solutions</a><a href="#integrations">Integrations</a><a href="#ai">AI</a>
+      <a href="/pages/pricing">Pricing</a><a href="/blogs/resources">Resources</a><a href="{{ settings.login_url | default: '#' }}">Log in</a>
+      <a class="btn" href="{{ settings.demo_url | default: '#' }}">Book a Demo →</a>
+    </div>
   </div>
 </header>
 {% schema %}{"name":"TraceKit Header","settings":[]}{% endschema %}
