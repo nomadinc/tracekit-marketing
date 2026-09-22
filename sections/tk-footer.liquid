@@ -1,8 +1,20 @@
 <footer class="tk-footer">
-  <div class="tk-shell">
-    <div class="tk-brand"><span class="tk-mark">≪K</span><span>Trace<span class="blue">Kit</span></span></div>
-    <p>Track. Reconcile. Trust.</p>
-    <small>© {{ 'now' | date: '%Y' }} TraceKit. All rights reserved.</small>
+  <div class="tk-shell tk-footer-grid">
+    <div class="tk-footer-brand">
+      <a class="tk-brand" href="{{ routes.root_url }}" aria-label="TraceKit home">
+        {% if settings.logo != blank %}
+          {{ settings.logo | image_url: width: 360 | image_tag: class: 'tk-logo', loading: 'lazy' }}
+        {% else %}
+          <span class="tk-mark">≪K</span><span>Trace<span class="blue">Kit</span></span>
+        {% endif %}
+      </a>
+      <p>One verified truth for every click, customer, and dollar.</p>
+      <small>Track. Reconcile. Trust.</small>
+    </div>
+    <div><strong>Product</strong><a href="#product">Overview</a><a href="#solutions">Solutions</a><a href="/pages/integrations">Integrations</a><a href="/pages/ai">AI + MCP</a></div>
+    <div><strong>Company</strong><a href="/pages/about">About</a><a href="/pages/contact">Contact</a><a href="/blogs/resources">Resources</a><a href="{{ settings.demo_url | default: '#' }}">Book a Demo</a></div>
+    <div><strong>Legal</strong><a href="/policies/privacy-policy">Privacy</a><a href="/policies/terms-of-service">Terms</a><a href="/pages/security">Security</a></div>
   </div>
+  <div class="tk-shell tk-footer-bottom"><span>© {{ 'now' | date: '%Y' }} TraceKit. All rights reserved.</span><span>Built for performance operators who need answers they can verify.</span></div>
 </footer>
 {% schema %}{"name":"TraceKit Footer","settings":[]}{% endschema %}
