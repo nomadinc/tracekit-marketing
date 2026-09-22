@@ -134,3 +134,10 @@
 @keyframes heroAura{0%,100%{opacity:.55;transform:scale(.96)}50%{opacity:1;transform:scale(1.05)}}@keyframes sparkleDrift{to{background-position:30px 34px,50px 43px}}
 @media(max-width:1100px){.approved-core{width:165px!important;height:165px!important}.approved-symbol.approved-app-icon{width:112px!important}.approved-side span{font-size:12px!important}.approved-side b{width:30px!important;height:30px!important}}
 @media(prefers-reduced-motion:reduce){.approved-core:before,.approved-core:after{animation:none!important}}
+
+/* Repo brand asset sizing */
+.tk-logo-repo{display:block!important;width:auto!important;height:auto!important;max-width:176px!important;max-height:44px!important;object-fit:contain!important}.tk-footer .tk-logo-repo{max-width:165px!important;max-height:42px!important}
+.approved-connect-app{width:92px!important;height:92px!important;max-width:92px!important;max-height:92px!important;border-radius:18px!important;object-fit:contain!important;box-shadow:0 0 22px rgba(24,105,255,.25)}
+.platform-ef img{width:auto!important;height:auto!important;max-width:58px!important;max-height:32px!important;object-fit:contain!important}
+.client-row img{object-fit:contain!important}
+@media(max-width:600px){.tk-logo-repo{max-width:145px!important;max-height:36px!important}}
