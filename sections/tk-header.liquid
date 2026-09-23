@@ -1,0 +1,22 @@
+<header class="tk-header">
+  <div class="tk-shell tk-nav">
+    <a class="tk-brand" href="{{ routes.root_url }}" aria-label="TraceKit home">
+      <img src="{{ 'Tracekit_logo.png' | asset_url }}" class="tk-logo tk-logo-repo" alt="TraceKit" loading="eager">
+    </a>
+    <nav aria-label="Primary">
+      <a href="#product">Product</a><a href="#solutions">Solutions</a><a href="#integrations">Integrations</a>
+      <a href="#ai">AI</a><a href="/pages/pricing">Pricing</a><a href="/blogs/resources">Resources</a>
+    </nav>
+    <div class="tk-nav-actions">
+      <a href="{{ settings.login_url | default: '#' }}">Log in</a>
+      <a class="btn small" href="{{ settings.demo_url | default: '#' }}">Book a Demo →</a>
+    </div>
+    <button class="tk-menu" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    <div class="tk-mobile-nav" hidden>
+      <a href="#product">Product</a><a href="#solutions">Solutions</a><a href="#integrations">Integrations</a><a href="#ai">AI</a>
+      <a href="/pages/pricing">Pricing</a><a href="/blogs/resources">Resources</a><a href="{{ settings.login_url | default: '#' }}">Log in</a>
+      <a class="btn" href="{{ settings.demo_url | default: '#' }}">Book a Demo →</a>
+    </div>
+  </div>
+</header>
+{% schema %}{"name":"TraceKit Header","settings":[]}{% endschema %}
