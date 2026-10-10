@@ -569,3 +569,42 @@
     max-width:135px!important;max-height:27px!important;
   }
 }
+
+/* Official integration artwork lockups: consistent heights, natural proportions */
+.integrations-v2 .logo-lockups{column-gap:16px!important}
+.integrations-v2 .brand-lockup{gap:5px!important}
+.integrations-v2 .brand-lockup.supplied-logo img{
+  width:auto!important;height:auto!important;object-fit:contain!important;
+  object-position:center!important;max-width:100%!important;
+  max-height:29px!important;filter:none!important;opacity:1!important;
+}
+.integrations-v2 .brand-lockup.shopify img{max-width:108px!important;max-height:28px!important}
+.integrations-v2 .brand-lockup.meta img{max-width:96px!important;max-height:28px!important}
+.integrations-v2 .brand-lockup.tiktok img{max-width:94px!important;max-height:28px!important}
+.integrations-v2 .brand-lockup.paypal img{
+  width:24px!important;height:26px!important;max-width:24px!important;
+  max-height:26px!important;margin:0!important;
+}
+.integrations-v2 .brand-lockup.googleads img{
+  width:25px!important;height:25px!important;max-width:25px!important;
+  max-height:25px!important;margin:0!important;
+}
+.integrations-v2 .brand-lockup.paypal span,.integrations-v2 .brand-lockup.googleads span{
+  display:inline!important;margin:0!important;padding:0!important;
+  color:#eef3fa!important;opacity:1!important;white-space:nowrap!important;
+  font-size:13px!important;line-height:1.1!important;font-weight:700!important;
+  letter-spacing:-.02em!important;transform:none!important;
+}
+.integrations-v2 .brand-lockup.everflow.supplied-logo img{
+  max-width:140px!important;max-height:29px!important;margin:0 auto!important;
+}
+@media(max-width:900px){
+  .integrations-v2 .brand-lockup.supplied-logo img{margin:0!important}
+}
+@media(max-width:600px){
+  .integrations-v2 .logo-lockups{column-gap:14px!important}
+  .integrations-v2 .brand-lockup.shopify img{max-width:104px!important}
+  .integrations-v2 .brand-lockup.meta img{max-width:92px!important}
+  .integrations-v2 .brand-lockup.tiktok img{max-width:88px!important}
+  .integrations-v2 .brand-lockup.everflow.supplied-logo img{max-width:130px!important}
+}
