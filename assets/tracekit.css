@@ -901,3 +901,17 @@
  .tk-mcp-refined .tk-mcp-example-heading small{margin-left:0}
  .tk-mcp-refined .tk-mcp-profit strong{font-size:25px}
 }
+
+/* AI-native chargeback attribution example */
+.tk-mcp-refined .tk-mcp-chargeback-summary{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin:10px 0 13px}
+.tk-mcp-refined .tk-mcp-chargeback-summary strong{color:#f2f6ff;font-size:21px}
+.tk-mcp-refined .tk-mcp-chargeback-summary span{font-size:11px;color:#9fb2cc}
+.tk-mcp-refined .tk-mcp-affiliate-table{border:1px solid #254162;border-radius:8px;overflow:hidden}
+.tk-mcp-refined .tk-mcp-affiliate-table>div{display:grid;grid-template-columns:minmax(0,1fr) auto auto;align-items:center;gap:12px;padding:9px 10px;border-bottom:1px solid #203551;color:#c8d7eb;font-size:11px}
+.tk-mcp-refined .tk-mcp-affiliate-table>div:last-child{border-bottom:0}
+.tk-mcp-refined .tk-mcp-affiliate-table strong{color:#eaf2ff;font-size:11px}
+.tk-mcp-refined .tk-mcp-affiliate-table small{color:#85b5f8;font-size:10px}
+@media(max-width:600px){
+ .tk-mcp-refined .tk-mcp-affiliate-table>div{grid-template-columns:minmax(0,1fr) auto;gap:4px 9px}
+ .tk-mcp-refined .tk-mcp-affiliate-table small{grid-column:2;text-align:right}
+}
