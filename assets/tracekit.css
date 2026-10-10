@@ -673,3 +673,10 @@
     padding-top:6px!important;
   }
 }
+
+/* Intelligence section desktop: tighten lower boundary without changing the card. */
+@media (min-width:901px){
+  .tk-intelligence-section{
+    padding-bottom:32px!important;
+  }
+}
