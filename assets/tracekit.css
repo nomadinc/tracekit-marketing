@@ -744,3 +744,21 @@
 @media(max-width:600px){
   .integrations-v2 .brand-lockup.nmi.supplied-logo img{max-width:96px!important;max-height:28px!important}
 }
+
+/* Featured integration strip: prevent Everflow from crowding Shopify */
+.integrations-v2 .logo-lockups > .brand-lockup.everflow.supplied-logo{
+  min-width:0!important;
+}
+.integrations-v2 .logo-lockups > .brand-lockup.everflow.supplied-logo > img{
+  max-width:108px!important;
+  max-height:24px!important;
+  width:auto!important;
+  height:auto!important;
+  object-fit:contain!important;
+}
+@media(max-width:600px){
+  .integrations-v2 .logo-lockups > .brand-lockup.everflow.supplied-logo > img{
+    max-width:100px!important;
+    max-height:23px!important;
+  }
+}
