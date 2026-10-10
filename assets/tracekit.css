@@ -680,3 +680,34 @@
     padding-bottom:32px!important;
   }
 }
+
+/* Everything Connects: polished vector streams and correct branded icon */
+@media(min-width:901px){
+ .tk-connect-refined{min-height:430px!important}
+ .tk-connect-refined .approved-platforms{left:16px!important;top:27px!important;bottom:27px!important}
+ .tk-connect-refined .approved-platforms span{width:76px!important;height:52px!important}
+ .tk-connect-refined .approved-results{right:22px!important;top:28px!important;bottom:28px!important}
+}
+.tk-connect-refined{border:1px solid #1d3655;border-radius:20px;background:#050b15!important;isolation:isolate}
+.tk-connect-refined .approved-platforms span{background:#0a1423;border:1px solid #1d304b}
+.tk-connect-refined .approved-platforms img{max-width:43px;max-height:34px;object-fit:contain}
+.tk-connect-refined .approved-platforms .platform-ef img{max-width:64px;max-height:28px}
+.tk-connect-refined .tk-connect-lines{pointer-events:none}
+.tk-connect-refined .tk-connect-lines .tk-connect-halo path{fill:none;stroke:#2587ff;stroke-width:3.2;opacity:.2;filter:url(#tk-connect-glow);stroke-dasharray:none}
+.tk-connect-refined .tk-connect-lines .tk-connect-halo path:nth-child(n+7){stroke:#9c4cff}
+.tk-connect-refined .tk-connect-lines .tk-connect-paths path{fill:none;stroke:url(#tk-connect-blue);stroke-width:1.2;stroke-dasharray:2.5 7;stroke-linecap:round;opacity:.9}
+.tk-connect-refined .tk-connect-lines .tk-connect-paths path:nth-child(n+7){stroke:url(#tk-connect-purple)}
+.tk-connect-refined .tk-connect-lines .tk-connect-dots circle{fill:#2ca6ff;filter:drop-shadow(0 0 3px #1b88ff)}
+.tk-connect-refined .tk-connect-lines .tk-connect-dots circle.out{fill:#b369ff;filter:drop-shadow(0 0 3px #9147ff)}
+.tk-connect-refined .tk-connect-core{background:linear-gradient(150deg,#0b172b,#050c18 70%);border:1px solid #2589ff;box-shadow:0 0 16px rgba(29,112,255,.3),4px -3px 14px rgba(132,60,244,.2);border-radius:21px}
+.tk-connect-refined .tk-connect-symbol{width:100px!important;max-width:75%!important;height:auto!important;max-height:95px!important;object-fit:contain!important;filter:none!important}
+.tk-connect-refined .tk-connect-core b{margin-top:19px;font-size:19px;color:#f4f7ff}
+.tk-connect-refined .tk-connect-core small{font-size:12px;color:#a5b5ca}
+.tk-connect-refined .approved-results i{background:#0b1524;border:1px solid #1d314a;color:#e2eafa}
+.tk-connect-refined .approved-results i svg{display:block;width:20px;height:20px}
+@media(max-width:900px){
+ .tk-connect-refined .tk-connect-lines{display:none!important}
+ .tk-connect-refined .tk-connect-core{left:50%!important}
+ .tk-connect-refined .approved-platforms img{max-width:39px}
+ .tk-connect-refined .approved-platforms .platform-ef img{max-width:51px}
+}
