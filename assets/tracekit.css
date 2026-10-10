@@ -167,3 +167,317 @@
 @media (max-width: 600px) {
   .hero .hero-grid h1 { line-height:1.14;letter-spacing:-.035em; }
 }
+
+/* HTML + SVG hero: independent of the old raster and its overrides */
+.hero .hero-vector{position:relative!important;display:block!important;isolation:isolate;width:100%!important;max-width:100%!important;min-height:0;aspect-ratio:720/480;overflow:visible!important;background:radial-gradient(ellipse at 53% 49%,rgba(22,83,245,.17),transparent 52%)}
+.hero-vector-paths{position:absolute;inset:0;width:100%;height:100%;z-index:1;overflow:visible}
+.hero-vector-paths path{fill:none;stroke:url(#tk-inbound);stroke-width:2.4;stroke-linecap:round}
+.hero-vector-paths path.out{stroke:url(#tk-outbound)}
+.hero-vector-glow{opacity:.72}.hero-vector-glow path{stroke-width:7}
+.hero-vector-inputs,.hero-vector-outputs{position:absolute;top:6%;bottom:10%;display:flex;flex-direction:column;justify-content:space-between;z-index:3}
+.hero-vector-inputs{left:0;width:24%}.hero-vector-outputs{right:0;width:23%}
+.hero-vector-inputs>div,.hero-vector-outputs>div{display:flex;align-items:center;gap:9px;min-height:9%;font-size:clamp(10px,1vw,14px);font-weight:650;color:#e5eafa;white-space:nowrap}
+.hero-vector-inputs>div{justify-content:flex-end}.hero-vector-outputs>div{justify-content:flex-start}
+.hero-vector .hv-icon{display:grid;place-items:center;flex:none;width:clamp(24px,2.4vw,34px);height:clamp(24px,2.4vw,34px);border-radius:50%;border:1px solid #233750;background:#0b1421;color:#dbe7ff;font-size:clamp(12px,1.3vw,17px);font-style:normal;box-shadow:0 0 12px rgba(26,99,255,.12)}
+.hero-vector-core{position:absolute;left:52.5%;top:49.4%;transform:translate(-50%,-50%);width:26%;aspect-ratio:1;z-index:4;display:grid;place-items:center;border-radius:23%;background:#070d17;border:1px solid #2d8dff;box-shadow:0 0 14px rgba(27,132,255,.85),0 0 42px rgba(29,94,255,.48),0 0 75px rgba(79,43,255,.28)}
+.hero-vector-core:before{content:"";position:absolute;inset:-25%;z-index:-1;border-radius:50%;background:radial-gradient(circle,rgba(30,120,255,.24),transparent 70%);filter:blur(11px)}
+.hero-vector-core:after{content:"";position:absolute;inset:-34%;z-index:-1;pointer-events:none;background-image:radial-gradient(circle,#318dff 0 1px,transparent 1.8px),radial-gradient(circle,#7151ff 0 1px,transparent 1.8px);background-size:21px 23px,29px 31px;opacity:.43;mask-image:radial-gradient(circle,transparent 25%,#000 40%,transparent 70%)}
+.hero-vector-core img{display:block!important;width:87%!important;height:87%!important;max-width:none!important;max-height:none!important;object-fit:contain!important;filter:none!important}
+.hero-vector-truth{position:absolute;left:52.5%;bottom:1%;transform:translateX(-50%);font-size:clamp(12px,1.4vw,18px);font-weight:750;color:#f3f7ff;white-space:nowrap;z-index:5}
+@media(max-width:900px){.hero .hero-vector{max-width:720px!important;margin:18px auto 0!important}.hero-vector-inputs>div,.hero-vector-outputs>div{font-size:clamp(10px,1.8vw,14px)}}
+@media(max-width:600px){.hero .hero-vector{aspect-ratio:720/540;min-height:0;margin-top:24px!important}.hero-vector-inputs,.hero-vector-outputs{top:10%;bottom:19%}.hero-vector-inputs{width:26%}.hero-vector-outputs{width:25%}.hero-vector-inputs>div,.hero-vector-outputs>div{font-size:clamp(8px,2.25vw,11px);gap:4px}.hero-vector .hv-icon{width:21px;height:21px;font-size:11px}.hero-vector-core{width:25%;top:48%}.hero-vector-truth{bottom:6%;font-size:13px}.hero-vector-paths{top:0;height:89%}}
+@media(prefers-reduced-motion:no-preference){.hero-vector-core:before{animation:heroAura 4s ease-in-out infinite}}
+
+/* Hero icon correction: standalone Fiverr symbol, single illuminated tile */
+.hero .hero-vector-core{width:24%;aspect-ratio:.88;border-radius:21%;background:linear-gradient(145deg,#0b1425 0%,#060c17 58%,#080b18 100%);border:1px solid #278eff;box-shadow:inset 0 1px 0 rgba(118,170,255,.28),0 0 10px rgba(29,136,255,.85),0 0 29px rgba(19,93,255,.58),9px -7px 35px rgba(134,46,255,.25)}
+.hero .hero-vector-core img{display:block!important;width:79%!important;height:auto!important;max-width:79%!important;max-height:80%!important;object-fit:contain!important;filter:none!important;border-radius:0!important;box-shadow:none!important;background:none!important}
+.hero .hero-vector-core:before{background:radial-gradient(circle at 45% 50%,rgba(20,105,255,.30),transparent 70%)}
+
+/* Hero refinement pass 2: slimmer tile, refined icon scale and cinematic lighting */
+.hero .hero-vector-core{
+  width:21.5%;aspect-ratio:.72;top:49%;
+  border-radius:17%;
+  background:linear-gradient(145deg,#0c1530 0%,#070d1a 45%,#050b16 100%);
+  border:1px solid #248bff;
+  box-shadow:inset 2px 0 10px rgba(29,109,255,.13),
+    0 0 7px rgba(0,137,255,.9),0 0 26px rgba(0,91,255,.53),
+    8px -7px 21px rgba(155,54,255,.43),0 0 55px rgba(29,74,255,.23);
+}
+.hero .hero-vector-core img{width:83%!important;max-width:83%!important;height:auto!important;max-height:70%!important}
+.hero .hero-vector-core:before{
+  inset:-20%;border-radius:22%;
+  background:radial-gradient(ellipse at 18% 58%,rgba(0,135,255,.52),transparent 52%),
+    radial-gradient(ellipse at 85% 18%,rgba(146,50,255,.34),transparent 52%);
+  filter:blur(17px);
+}
+.hero .hero-vector-core:after{
+  inset:-30%;opacity:.22;
+  mask-image:radial-gradient(ellipse,transparent 34%,#000 49%,transparent 71%);
+}
+.hero-vector-paths path{stroke-width:1.35;opacity:.86}
+.hero-vector-glow{opacity:.43}
+.hero-vector-glow path{stroke-width:4.3}
+.hero-vector-inputs,.hero-vector-outputs{top:7%;bottom:11%}
+.hero-vector .hv-icon{
+  width:clamp(22px,1.9vw,28px);height:clamp(22px,1.9vw,28px);
+  border-color:rgba(33,52,75,.34);background:#080f1b;
+  box-shadow:0 0 8px rgba(17,71,154,.10);
+  font-size:clamp(11px,1.15vw,15px);
+}
+.hero-vector-inputs>div,.hero-vector-outputs>div{gap:8px}
+.hero-vector-truth{bottom:2%;font-weight:650;font-size:clamp(12px,1.3vw,17px)}
+@media(max-width:600px){
+  .hero .hero-vector-core{width:24%;top:48%;aspect-ratio:.72}
+  .hero-vector .hv-icon{width:19px;height:19px;font-size:10px}
+  .hero-vector-inputs,.hero-vector-outputs{top:10%;bottom:19%}
+  .hero-vector-truth{bottom:6%}
+}
+
+/* Hero pass 3 — electrically illuminated mockup treatment */
+.hero .hero-vector-core{
+  display:flex!important;align-items:center!important;justify-content:center!important;
+  overflow:visible;isolation:isolate;
+  background:linear-gradient(145deg,#07112a 0%,#070b17 45%,#040b17 100%);
+  border:1px solid rgba(42,145,255,.96);
+  border-radius:16%;
+  box-shadow:inset 2px 0 0 rgba(22,120,255,.25),
+    inset -2px 1px 0 rgba(151,67,255,.22),
+    0 0 3px #1c9fff,0 0 11px rgba(0,117,255,.88),
+    0 0 26px rgba(0,83,255,.38),5px -6px 22px rgba(146,49,255,.24);
+}
+.hero .hero-vector-core img{
+  position:relative;z-index:2;display:block!important;
+  width:77%!important;max-width:77%!important;height:auto!important;
+  max-height:65%!important;object-fit:contain!important;
+  transform:translateY(-1.5%);
+}
+.hero .hero-vector-core .hero-vector-aura{
+  position:absolute;inset:7% 8%;border-radius:14%;z-index:1;pointer-events:none;
+  border-left:1px solid rgba(10,100,255,.45);
+  border-top:1px solid rgba(91,52,255,.32);
+  box-shadow:inset 6px 0 12px rgba(17,69,220,.09);
+}
+.hero .hero-vector-core:before{
+  inset:-30%;border-radius:25%;z-index:-1;
+  background:radial-gradient(ellipse at 9% 51%,rgba(0,142,255,.55),transparent 35%),
+    radial-gradient(ellipse at 95% 47%,rgba(125,41,255,.42),transparent 38%),
+    radial-gradient(ellipse at 64% 1%,rgba(120,43,255,.23),transparent 35%);
+  filter:blur(15px);
+}
+.hero .hero-vector-core:after{opacity:.10;z-index:-1}
+.hero-vector-paths{overflow:visible}
+.hero-vector-lines path{stroke-width:1.05;opacity:.75}
+.hero-vector-glow{opacity:.28}
+.hero-vector-glow path{stroke-width:3.5}
+.hero-vector-paths .hero-electric-strands path{
+  fill:none;stroke:url(#tk-inbound);stroke-width:.55;opacity:.65;
+  stroke-linecap:round;filter:drop-shadow(0 0 2px rgba(25,137,255,.65));
+}
+.hero-vector-paths .hero-electric-strands path.out{
+  stroke:url(#tk-outbound);opacity:.63;
+  filter:drop-shadow(0 0 2px rgba(148,68,255,.6));
+}
+.hero-vector-paths .hero-electric-nodes circle{fill:#1da4ff;filter:drop-shadow(0 0 3px #159dff)}
+.hero-vector-paths .hero-electric-nodes circle.out{fill:#a65cff;filter:drop-shadow(0 0 3px #a65cff)}
+@media(prefers-reduced-motion:no-preference){
+  .hero-vector-paths .hero-electric-strands path{
+    stroke-dasharray:4 14;animation:tkElectricCurrent 7s linear infinite;
+  }
+  .hero-vector-paths .hero-electric-strands path.out{animation-direction:reverse}
+}
+@keyframes tkElectricCurrent{to{stroke-dashoffset:-108}}
+@media(prefers-reduced-motion:reduce){.hero-vector-paths .hero-electric-strands path{stroke-dasharray:none;animation:none}}
+
+/* Hero lighting refinement: continuous current, concentrated convergence, glass tile */
+.hero-vector-paths .hero-electric-strands path,
+.hero-vector-paths .hero-electric-strands path.out{
+  stroke-dasharray:none!important;animation:none!important;
+  stroke-width:.55;opacity:.48;
+}
+.hero-vector-paths .hero-electric-convergence{opacity:.67;mix-blend-mode:screen}
+.hero-vector-paths .hero-electric-pulse{filter:drop-shadow(0 0 3px currentColor)}
+.hero .hero-vector-core{
+  border-color:rgba(43,129,244,.52);
+  background:linear-gradient(135deg,rgba(10,20,43,.98),rgba(5,10,21,.99) 62%);
+  box-shadow:inset 1px 1px 0 rgba(77,134,255,.17),
+    inset -1px 0 0 rgba(122,63,225,.13),
+    -2px 0 10px rgba(11,102,255,.36),3px -3px 11px rgba(131,55,255,.26),
+    0 0 21px rgba(10,67,172,.18);
+}
+.hero .hero-vector-core:before{
+  background:radial-gradient(ellipse at 0% 51%,rgba(0,144,255,.57),transparent 32%),
+    radial-gradient(ellipse at 100% 50%,rgba(120,52,255,.43),transparent 32%),
+    radial-gradient(ellipse at 82% 0%,rgba(136,48,255,.22),transparent 34%);
+  filter:blur(10px);
+}
+.hero .hero-vector-core .hero-vector-aura{
+  border-top:1px solid rgba(117,60,231,.4);
+  border-left:1px solid rgba(18,95,244,.4);
+  box-shadow:inset 5px 0 11px rgba(21,82,215,.07);
+}
+@media(prefers-reduced-motion:reduce){
+  .hero-electric-travel{display:none}
+}
+
+/* Hero trust indicators — concise, legible benefits */
+.hero .tk-trust-indicators{
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;
+  margin-top:34px;align-items:start;
+}
+.hero .tk-trust-item{display:flex;flex-direction:column;align-items:flex-start;gap:9px;min-width:0}
+.hero .tk-trust-icon{
+  width:38px;height:38px;display:grid;place-items:center;
+  border-radius:10px;background:#0d1b30;border:1px solid rgba(52,105,180,.23);
+  color:#58a4ff;flex:none;
+}
+.hero .tk-trust-copy{display:flex;flex-direction:column;gap:5px;min-width:0}
+.hero .tk-trust-copy strong{font-size:13px;line-height:1.25;color:#f5f7fb;font-weight:700;letter-spacing:-.015em}
+.hero .tk-trust-copy small{font-size:11px;line-height:1.45;color:#9caabd;font-weight:400;letter-spacing:0}
+@media(max-width:900px){.hero .tk-trust-indicators{gap:18px}}
+@media(max-width:480px){
+  .hero .tk-trust-indicators{grid-template-columns:1fr;gap:15px;margin-top:26px}
+  .hero .tk-trust-item{flex-direction:row;align-items:center;gap:12px}
+  .hero .tk-trust-icon{width:38px;height:38px}
+}
+
+/* Trust row layout hardening: override older .proof and .proof span rules */
+.hero .hero-grid .proof.tk-trust-indicators{
+  display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  gap:16px!important;align-items:stretch!important;justify-items:stretch!important;
+  width:100%!important;margin:30px 0 0!important;flex-wrap:initial!important;
+}
+.hero .hero-grid .proof.tk-trust-indicators>.tk-trust-item{
+  display:flex!important;flex-direction:column!important;align-items:flex-start!important;
+  justify-content:flex-start!important;gap:10px!important;min-width:0!important;
+  margin:0!important;padding:0!important;white-space:normal!important;
+}
+.hero .hero-grid .proof.tk-trust-indicators .tk-trust-icon{
+  display:flex!important;align-items:center!important;justify-content:center!important;
+  width:40px!important;height:40px!important;min-width:40px!important;min-height:40px!important;
+  padding:0!important;margin:0!important;flex:none!important;
+  background:#0d1b30!important;border:1px solid rgba(52,105,180,.28)!important;border-radius:10px!important;
+  color:#58a4ff!important;
+}
+.hero .hero-grid .proof.tk-trust-indicators .tk-trust-icon svg{
+  display:block!important;width:22px!important;height:22px!important;max-width:none!important;
+}
+.hero .hero-grid .proof.tk-trust-indicators .tk-trust-copy{
+  display:flex!important;flex-direction:column!important;align-items:flex-start!important;
+  gap:5px!important;min-width:0!important;width:100%!important;
+  margin:0!important;padding:0!important;white-space:normal!important;
+}
+.hero .hero-grid .proof.tk-trust-indicators .tk-trust-copy strong{
+  display:block!important;font-size:13px!important;line-height:1.3!important;
+  font-weight:700!important;color:#f5f7fb!important;white-space:normal!important;
+}
+.hero .hero-grid .proof.tk-trust-indicators .tk-trust-copy small{
+  display:block!important;font-size:11px!important;line-height:1.5!important;
+  font-weight:400!important;color:#9caabd!important;white-space:normal!important;
+}
+@media(max-width:600px){
+  .hero .hero-grid .proof.tk-trust-indicators{grid-template-columns:1fr!important;gap:16px!important}
+  .hero .hero-grid .proof.tk-trust-indicators>.tk-trust-item{flex-direction:row!important;align-items:center!important}
+}
+
+/* Mobile-only hero reading order: headline → diagram → actions → proof.
+   Desktop markup and styling intentionally unchanged. */
+@media (max-width:600px){
+  .hero .hero-grid{
+    display:grid!important;
+    grid-template-columns:minmax(0,1fr)!important;
+    gap:0!important;
+    align-items:start!important;
+  }
+  .hero .hero-grid > .reveal:first-child{display:contents!important}
+  .hero .hero-grid > .reveal:first-child > .eyebrow{
+    grid-column:1;grid-row:1;margin:0 0 18px;
+    font-size:clamp(8px,2.05vw,10px);letter-spacing:.055em;
+    max-width:100%;white-space:normal;
+  }
+  .hero .hero-grid > .reveal:first-child > h1{
+    grid-column:1;grid-row:2;
+    font-size:clamp(36px,9.8vw,42px)!important;
+    line-height:1.1!important;letter-spacing:-.037em!important;
+    margin:0 0 20px!important;max-width:100%!important;
+  }
+  .hero .hero-grid > .reveal:first-child > .lead{
+    grid-column:1;grid-row:3;
+    margin:0!important;font-size:15px!important;line-height:1.58!important;
+  }
+  .hero .hero-grid > .hero-vector{
+    grid-column:1;grid-row:4;
+    margin:24px auto 20px!important;
+    width:100%!important;max-width:100%!important;
+    min-width:0!important;
+  }
+  .hero .hero-grid > .reveal:first-child > .actions{
+    grid-column:1;grid-row:5;
+    display:flex!important;flex-direction:column!important;
+    align-items:stretch!important;gap:14px!important;
+    margin:0!important;width:100%!important;
+  }
+  .hero .hero-grid > .reveal:first-child > .actions .btn{
+    width:100%;min-height:54px;
+  }
+  .hero .hero-grid > .reveal:first-child > .actions .watch{
+    align-self:center;
+  }
+  .hero .hero-grid > .reveal:first-child > .proof.tk-trust-indicators{
+    grid-column:1;grid-row:6;
+    margin-top:26px!important;
+  }
+  .tk-header .tk-brand-vector{width:195px!important;gap:8px!important}
+  .tk-header .tk-brand-vector img:first-child{
+    width:45px!important;max-height:42px!important;
+  }
+  .tk-header .tk-brand-vector img:last-child{
+    width:142px!important;max-width:calc(100% - 53px)!important;
+  }
+}
+
+/* Mobile visual QA: center the hero diagram and compact trust row.
+   Desktop intentionally unaffected. */
+@media (max-width:600px){
+  .hero .hero-grid > .hero-vector{
+    justify-self:center!important;
+    position:relative!important;
+    left:0!important;right:auto!important;
+    transform:translateX(-2.5%)!important;
+    transform-origin:center center!important;
+    margin:20px auto 16px!important;
+  }
+  .hero .hero-grid .proof.tk-trust-indicators{
+    display:grid!important;
+    grid-template-columns:repeat(3,minmax(0,1fr))!important;
+    column-gap:10px!important;
+    row-gap:0!important;
+    margin-top:24px!important;
+    width:100%!important;
+  }
+  .hero .hero-grid .proof.tk-trust-indicators>.tk-trust-item{
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:center!important;
+    text-align:center!important;
+    justify-content:flex-start!important;
+    gap:8px!important;
+    min-width:0!important;
+  }
+  .hero .hero-grid .proof.tk-trust-indicators .tk-trust-icon{
+    width:38px!important;height:38px!important;
+    min-width:38px!important;min-height:38px!important;
+  }
+  .hero .hero-grid .proof.tk-trust-indicators .tk-trust-copy{
+    align-items:center!important;
+    text-align:center!important;
+    gap:5px!important;
+  }
+  .hero .hero-grid .proof.tk-trust-indicators .tk-trust-copy strong{
+    font-size:clamp(10px,2.8vw,12px)!important;
+    line-height:1.3!important;
+  }
+  .hero .hero-grid .proof.tk-trust-indicators .tk-trust-copy small{
+    font-size:clamp(9px,2.45vw,11px)!important;
+    line-height:1.4!important;
+  }
+}
