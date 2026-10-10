@@ -549,3 +549,23 @@
   }
   .integrations-v2 .brand-lockup.commas .tk-commas-inline{width:112px!important}
 }
+
+/* Final Everflow asset: white transparent wordmark on the dark integration strip */
+.integrations-v2 .brand-lockup.everflow.supplied-logo{
+  background:transparent!important;border:none!important;border-radius:0!important;
+  padding:0!important;gap:0!important;min-height:38px!important;
+}
+.integrations-v2 .brand-lockup.everflow.supplied-logo > img{
+  display:block!important;width:auto!important;height:auto!important;
+  max-width:145px!important;max-height:30px!important;
+  object-fit:contain!important;object-position:center!important;
+  margin:0 auto!important;filter:none!important;opacity:1!important;
+}
+@media(max-width:900px){
+  .integrations-v2 .brand-lockup.everflow.supplied-logo > img{margin:0!important}
+}
+@media(max-width:600px){
+  .integrations-v2 .brand-lockup.everflow.supplied-logo > img{
+    max-width:135px!important;max-height:27px!important;
+  }
+}
