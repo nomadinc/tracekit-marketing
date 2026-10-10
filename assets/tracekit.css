@@ -509,3 +509,43 @@
   }
   .integrations-v2 .brand-lockup.commas.supplied-logo img{max-width:112px!important}
 }
+
+/* Integration artwork contrast: isolated brand lockups, no light logo cards */
+.integrations-v2 .brand-lockup.everflow.supplied-logo{
+  background:transparent!important;border:0!important;border-radius:0!important;
+  padding:0!important;gap:7px!important;min-height:38px!important;
+  flex:1 1 0!important;justify-content:center!important;
+}
+.integrations-v2 .brand-lockup.everflow .tk-everflow-mark{
+  position:relative!important;display:block!important;flex:0 0 28px!important;
+  width:28px!important;height:25px!important;overflow:hidden!important;
+  opacity:1!important;transform:none!important;
+}
+.integrations-v2 .brand-lockup.everflow .tk-everflow-mark img{
+  position:absolute!important;left:0!important;top:50%!important;
+  transform:translateY(-50%)!important;
+  display:block!important;width:145px!important;height:auto!important;
+  max-width:none!important;max-height:none!important;margin:0!important;
+  filter:none!important;opacity:1!important;
+}
+.integrations-v2 .brand-lockup.everflow .tk-everflow-wordmark{
+  display:block!important;color:#e7edf8!important;font-size:12px!important;
+  font-weight:800!important;letter-spacing:.085em!important;line-height:1!important;
+  opacity:1!important;white-space:nowrap!important;transform:none!important;
+}
+.integrations-v2 .brand-lockup.commas .tk-commas-inline{
+  display:block!important;width:120px!important;height:auto!important;
+  max-width:100%!important;flex:none!important;overflow:visible!important;
+  opacity:1!important;filter:none!important;
+}
+@media(max-width:900px){
+  .integrations-v2 .brand-lockup.everflow.supplied-logo{
+    flex:0 0 calc(25% - 16px)!important;justify-content:flex-start!important;
+  }
+}
+@media(max-width:600px){
+  .integrations-v2 .brand-lockup.everflow.supplied-logo{
+    flex:0 0 calc(50% - 10px)!important;justify-content:flex-start!important;
+  }
+  .integrations-v2 .brand-lockup.commas .tk-commas-inline{width:112px!important}
+}
