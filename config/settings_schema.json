@@ -1,0 +1,28 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "TraceKit Marketing",
+    "theme_version": "1.0.0",
+    "theme_author": "TraceKit"
+  },
+  {
+    "name": "Brand",
+    "settings": [
+      {"type":"image_picker","id":"logo","label":"TraceKit full logo (dark background)"},
+      {"type":"image_picker","id":"tracekit_symbol","label":"TraceKit TK symbol"},
+      {"type":"image_picker","id":"tracekit_app_icon","label":"TraceKit app icon"},
+      {"type":"image_picker","id":"favicon","label":"TraceKit favicon"},
+      {"type":"url","id":"demo_url","label":"Book a Demo URL"},
+      {"type":"url","id":"login_url","label":"Login URL"},
+      {"type":"url","id":"overview_url","label":"Overview video URL"}
+    ]
+  },
+  {
+    "name": "Integration logos",
+    "settings": [
+      {"type":"image_picker","id":"everflow_logo","label":"Everflow logo"},
+      {"type":"image_picker","id":"commas_logo","label":"Commas logo"},
+      {"type":"image_picker","id":"checkout_champ_logo","label":"Checkout Champ logo"}
+    ]
+  }
+]

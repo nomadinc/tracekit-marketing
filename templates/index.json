@@ -1,0 +1,9 @@
+{
+  "sections": {
+    "main": {
+      "type": "tk-home",
+      "settings": {}
+    }
+  },
+  "order": ["main"]
+}
