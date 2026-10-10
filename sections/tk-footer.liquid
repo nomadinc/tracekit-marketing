@@ -2,7 +2,10 @@
   <div class="tk-shell tk-footer-grid">
     <div class="tk-footer-brand">
       <a class="tk-brand" href="{{ routes.root_url }}" aria-label="TraceKit home">
-        <img src="{{ 'tracekit-logo-header-white.svg' | asset_url }}" class="tk-logo tk-logo-repo" alt="TraceKit" loading="lazy">
+        <span class="tk-brand-vector" style="display:inline-flex;align-items:center;gap:9px;max-width:100%">
+        <img src="{{ 'tracekit-symbol-white-k.svg' | asset_url }}" alt="" aria-hidden="true" style="display:block;width:48px;height:auto;flex:none;max-height:36px;object-fit:contain">
+        <img src="{{ 'tracekit-logo-header-white.svg' | asset_url }}" alt="TraceKit" loading="lazy" style="display:block;width:175px;max-width:calc(100% - 57px);height:auto;object-fit:contain">
+      </span>
       </a>
       <p>One verified truth for every click, customer, and dollar.</p>
       <small>Track. Reconcile. Trust.</small>
