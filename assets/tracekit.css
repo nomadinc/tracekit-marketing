@@ -734,3 +734,13 @@
    right:22px!important;top:28px!important;bottom:28px!important;
  }
 }
+
+/* Featured integrations: NMI official vector lockup */
+.integrations-v2 .brand-lockup.nmi.supplied-logo img{
+  display:block!important;width:auto!important;height:auto!important;
+  max-width:105px!important;max-height:30px!important;
+  object-fit:contain!important;opacity:1!important;filter:none!important;
+}
+@media(max-width:600px){
+  .integrations-v2 .brand-lockup.nmi.supplied-logo img{max-width:96px!important;max-height:28px!important}
+}
