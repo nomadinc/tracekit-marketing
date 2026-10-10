@@ -481,3 +481,31 @@
     line-height:1.4!important;
   }
 }
+
+/* Integration logo contrast — retain supplied brand artwork */
+.integrations-v2 .brand-lockup.everflow.supplied-logo{
+  background:#eaf0f9!important;border-radius:8px!important;
+  padding:6px 10px!important;flex:1 1 0!important;
+  min-height:38px!important;
+}
+.integrations-v2 .brand-lockup.everflow.supplied-logo img{
+  max-width:100%!important;max-height:25px!important;
+  filter:none!important;opacity:1!important;
+}
+.integrations-v2 .brand-lockup.commas.supplied-logo img{
+  max-width:120px!important;max-height:29px!important;
+  filter:none!important;opacity:1!important;
+}
+@media(max-width:900px){
+  .integrations-v2 .brand-lockup.everflow.supplied-logo{
+    flex:0 0 calc(25% - 16px)!important;
+    justify-content:center!important;
+  }
+}
+@media(max-width:600px){
+  .integrations-v2 .brand-lockup.everflow.supplied-logo{
+    flex:0 0 calc(50% - 10px)!important;
+    padding:5px 9px!important;
+  }
+  .integrations-v2 .brand-lockup.commas.supplied-logo img{max-width:112px!important}
+}
