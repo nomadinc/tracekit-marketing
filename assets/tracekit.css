@@ -820,3 +820,17 @@
  .tk-journey-event .tk-event-evidence{position:static;transform:none;width:auto;margin:10px 0 0 60px}
  .tk-journey-heading>.tk-journey-demo-label{font-size:9px}
 }
+
+@media(min-width:901px){
+.tk-journey-section{padding-top:68px!important}
+.tk-journey-section .journey-copy{margin-bottom:26px!important}
+}
+.tk-journey-section .tk-journey-timeline{padding-bottom:125px}
+.tk-journey-section .tk-journey-event .tk-event-evidence{top:100%!important;bottom:auto!important;margin-top:10px!important}
+.tk-journey-section .tk-journey-event:first-child .tk-event-evidence{left:0!important;transform:none!important}
+.tk-journey-section .tk-journey-event:last-child .tk-event-evidence{left:auto!important;right:0!important;transform:none!important}
+.tk-journey-section .tk-event-symbol svg{display:block}
+@media(max-width:600px){
+.tk-journey-section .tk-journey-timeline{padding-bottom:0}
+.tk-journey-section .tk-journey-event .tk-event-evidence{position:static!important;transform:none!important;width:auto!important;margin:10px 0 0 60px!important}
+}
