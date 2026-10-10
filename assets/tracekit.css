@@ -608,3 +608,18 @@
   .integrations-v2 .brand-lockup.tiktok img{max-width:88px!important}
   .integrations-v2 .brand-lockup.everflow.supplied-logo img{max-width:130px!important}
 }
+
+/* Integration visual QA: enlarge the complete Meta lockup only */
+.integrations-v2 .brand-lockup.meta.supplied-logo img{
+  max-width:132px!important;
+  max-height:38px!important;
+  width:auto!important;
+  height:auto!important;
+  object-fit:contain!important;
+}
+@media(max-width:600px){
+  .integrations-v2 .brand-lockup.meta.supplied-logo img{
+    max-width:118px!important;
+    max-height:34px!important;
+  }
+}
