@@ -159,7 +159,7 @@
 
 /* Hero headline readability refinement — preserve approved typography and line breaks */
 @media (min-width: 901px) {
-  .hero .hero-grid h1 { font-size:clamp(46px,3.15vw,58px);line-height:1.13;letter-spacing:-.038em;max-width:660px; }
+  .hero .hero-grid h1 { font-size:60px;line-height:1.13;letter-spacing:-.038em;max-width:660px; }
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .hero .hero-grid h1 { line-height:1.13;letter-spacing:-.035em; }
