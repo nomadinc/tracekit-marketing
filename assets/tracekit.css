@@ -711,3 +711,26 @@
  .tk-connect-refined .approved-platforms img{max-width:39px}
  .tk-connect-refined .approved-platforms .platform-ef img{max-width:51px}
 }
+
+/* Everything Connects visual QA: readable left platform lockups; accurate right connections */
+@media(min-width:901px){
+ .tk-connect-refined .approved-platforms span{
+   width:91px!important;height:57px!important;
+ }
+ .tk-connect-refined .approved-platforms img{
+   max-width:60px!important;max-height:43px!important;
+   width:auto!important;height:auto!important;object-fit:contain!important;
+ }
+ .tk-connect-refined .approved-platforms .platform-ef img{
+   max-width:79px!important;max-height:35px!important;
+ }
+ .tk-connect-refined .approved-platforms span:nth-child(3) img{
+   max-width:77px!important;max-height:34px!important;
+ }
+ .tk-connect-refined .approved-platforms span:nth-child(5) img{
+   max-width:78px!important;max-height:35px!important;
+ }
+ .tk-connect-refined .approved-results{
+   right:22px!important;top:28px!important;bottom:28px!important;
+ }
+}
