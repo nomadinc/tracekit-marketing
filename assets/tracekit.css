@@ -660,3 +660,16 @@
   .tk-intelligence-section .tk-demo-metric strong{font-size:29px}
   .tk-intelligence-section .tk-evidence-breakdown>div{font-size:11px}
 }
+
+/* Intelligence section desktop alignment: align copy to card top, tighten top space.
+   Tablet/mobile and card internals remain unchanged. */
+@media (min-width:901px){
+  .tk-intelligence-section{padding-top:76px!important}
+  .tk-intelligence-section .tk-shell.split{
+    align-items:start!important;
+  }
+  .tk-intelligence-section .section-copy{
+    align-self:start!important;
+    padding-top:6px!important;
+  }
+}
