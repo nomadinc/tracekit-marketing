@@ -156,3 +156,14 @@
 @media(max-width:1100px){.hero-grid{grid-template-columns:minmax(0,46fr) minmax(0,54fr)!important;gap:28px!important}.hero-art img{width:100%!important;max-height:500px!important}}
 @media(max-width:900px){.hero-grid{grid-template-columns:1fr!important}.hero-art{max-width:760px!important;margin:18px auto 0!important}.hero-art img{width:100%!important;max-height:none!important}}
 @media(max-width:600px){.hero-art{width:100%!important;margin:14px auto 0!important;overflow:hidden!important}.hero-art img{width:100%!important;max-width:100%!important;margin:0!important}}
+
+/* Hero headline readability refinement — preserve approved typography and line breaks */
+@media (min-width: 901px) {
+  .hero .hero-grid h1 { font-size:clamp(46px,3.15vw,58px);line-height:1.13;letter-spacing:-.038em;max-width:660px; }
+}
+@media (min-width: 601px) and (max-width: 900px) {
+  .hero .hero-grid h1 { line-height:1.13;letter-spacing:-.035em; }
+}
+@media (max-width: 600px) {
+  .hero .hero-grid h1 { line-height:1.14;letter-spacing:-.035em; }
+}
