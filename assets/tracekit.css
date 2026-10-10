@@ -834,3 +834,9 @@
 .tk-journey-section .tk-journey-timeline{padding-bottom:0}
 .tk-journey-section .tk-journey-event .tk-event-evidence{position:static!important;transform:none!important;width:auto!important;margin:10px 0 0 60px!important}
 }
+
+/* Journey visual QA: slightly reduce empty space beneath evidence cards */
+@media(min-width:901px){
+ .tk-journey-section .tk-journey-timeline{padding-bottom:100px}
+ .tk-journey-section .tk-journey-demo{padding-bottom:20px!important}
+}
