@@ -141,11 +141,19 @@
       <span><i aria-hidden="true">＋</i><b>More</b></span>
     </div><p class="tk-mcp-client-note">Examples of MCP-capable clients; availability and setup vary by client.</p></div>
     <div class="approved-query tk-mcp-example"><div class="tk-mcp-example-heading"><span class="tk-mcp-example-dot" aria-hidden="true"></span><strong>Example MCP interaction</strong><small>Illustrative, not a live query</small></div>
-      <div class="tk-mcp-question"><small>BUSINESS QUESTION</small><p>What was my net profit yesterday?</p></div>
-      <div class="tk-mcp-response"><small>EXAMPLE STRUCTURED RESPONSE</small><div class="tk-mcp-profit"><strong>$48,221.17</strong><span>USD · Example value</span></div><p>TraceKit can expose governed data and source context for a compatible assistant to interpret.</p><details class="tk-mcp-json"><summary>View example JSON <span aria-hidden="true">⌄</span></summary><pre>{
-  "net_profit": 48221.17,
+      <div class="tk-mcp-question"><small>BUSINESS QUESTION</small><p>Which affiliates are responsible for these chargebacks?</p></div>
+      <div class="tk-mcp-response"><small>EXAMPLE ATTRIBUTION ANALYSIS</small><div class="tk-mcp-chargeback-summary"><strong>12 chargebacks</strong><span>$1,846 disputed · Illustrative data</span></div>
+        <div class="tk-mcp-affiliate-table"><div><span>Affiliate 112</span><strong>7 chargebacks</strong><small>$1,084</small></div><div><span>Affiliate 204</span><strong>3 chargebacks</strong><small>$462</small></div><div><span>Unresolved attribution</span><strong>2 chargebacks</strong><small>$300</small></div></div>
+        <p>10 chargebacks are linked to attributed affiliate traffic. Two remain unresolved. Attribution identifies associated traffic, not proof of causation.</p>
+        <details class="tk-mcp-json"><summary>View example JSON <span aria-hidden="true">⌄</span></summary><pre>{
+  "chargebacks": 12,
+  "disputed_total": 1846,
   "currency": "USD",
-  "change_pct": 11.0
+  "affiliates": [
+    {"affiliate_id": "112", "count": 7, "amount": 1084},
+    {"affiliate_id": "204", "count": 3, "amount": 462}
+  ],
+  "unresolved": {"count": 2, "amount": 300}
 }</pre></details></div>
       <p class="tk-mcp-example-note">Illustrative presentation. Results depend on permissions, connected data, and available tools.</p>
     </div>
