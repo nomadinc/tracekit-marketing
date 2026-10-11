@@ -1,0 +1,55 @@
+{
+  "sections": {
+    "main": {
+      "type": "tk-content-page",
+      "settings": {
+        "eyebrow": "RESOURCES",
+        "headline": "Learn to see the full picture.",
+        "intro": "Explore practical guidance on attribution, reconciliation, customer journeys, ecommerce measurement, and evidence-led intelligence.",
+        "cta_text": "Book a Demo",
+        "note": "Editorial hub scaffold. Articles and publication dates will be added separately.",
+        "show_contact": false,
+        "show_secondary_cta": true
+      },
+      "blocks": {
+        "feature_0": {
+          "type": "feature",
+          "settings": {
+            "heading": "Attribution and identity",
+            "body": "How identifiers connect acquisition sources to customer and transaction activity."
+          }
+        },
+        "feature_1": {
+          "type": "feature",
+          "settings": {
+            "heading": "Commerce lifecycle",
+            "body": "Why upsells, refunds, rebills, and chargebacks should remain distinct events."
+          }
+        },
+        "feature_2": {
+          "type": "feature",
+          "settings": {
+            "heading": "Data reconciliation",
+            "body": "How to investigate missing or conflicting numbers without losing source evidence."
+          }
+        },
+        "feature_3": {
+          "type": "feature",
+          "settings": {
+            "heading": "Intelligence and MCP",
+            "body": "Understand the difference between built-in TraceKit Intelligence and optional external MCP access."
+          }
+        }
+      },
+      "block_order": [
+        "feature_0",
+        "feature_1",
+        "feature_2",
+        "feature_3"
+      ]
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
