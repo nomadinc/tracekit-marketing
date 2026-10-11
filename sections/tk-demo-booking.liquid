@@ -1,0 +1,77 @@
+<section class="tk-content-page tk-demo-page">
+<div class="tk-shell tk-demo-layout">
+  <div class="tk-demo-intro">
+    <span class="tk-page-eyebrow">SEE TRACEKIT IN ACTION</span>
+    <h1>Let's uncover what's really happening in your business.</h1>
+    <p>Tell us about your business, and we'll explore how TraceKit can connect your data, investigate discrepancies, and make performance easier to understand.</p>
+    <div class="tk-demo-benefits"><div><strong>Connect the evidence</strong><p>Discuss your marketing, attribution, commerce, and financial systems.</p></div><div><strong>Explore TraceKit Intelligence</strong><p>See how connected records can support clearer investigations.</p></div><div><strong>Find the right next step</strong><p>Review your priorities and the capabilities relevant to your team.</p></div></div>
+    <p class="tk-demo-disclosure">The inquiry and meeting booking are separate steps. We won't claim your meeting is booked until Calendly confirms it.</p>
+  </div>
+  <div class="tk-page-contact tk-demo-form-panel">
+    {% form 'contact', id: 'TraceKitDemoForm' %}
+      {% if form.posted_successfully? %}
+        <div class="tk-demo-success" role="status" data-calendly-base="https://calendly.com/anthony-trace-kit/30min">
+          <span class="tk-demo-success-mark" aria-hidden="true">✓</span>
+          <h2>Inquiry received. Let's get your demo scheduled.</h2>
+          <p>Your message has been submitted. Continue to Calendly to select a convenient time.</p>
+          <a class="btn tk-demo-calendar-link" href="https://calendly.com/anthony-trace-kit/30min" rel="noopener">Choose a demo time →</a>
+          <small>Submitting this form does not reserve a meeting. Calendly will confirm your booking.</small>
+        </div>
+      {% else %}
+        <h2>Book Your Personalized Demo</h2>
+        <p class="tk-demo-form-lead">First, tell us a little about your business.</p>
+        {% if form.errors %}<div role="alert">{{ form.errors | default_errors }}</div>{% endif %}
+        <input type="hidden" name="contact[subject]" value="TraceKit demo inquiry">
+        <div class="tk-page-form-grid">
+          <label>First name <input type="text" name="contact[first_name]" id="tk-demo-first" autocomplete="given-name" required></label>
+          <label>Last name <input type="text" name="contact[last_name]" id="tk-demo-last" autocomplete="family-name" required></label>
+          <label>Work email <input type="email" name="contact[email]" id="tk-demo-email" autocomplete="email" required></label>
+          <label>Company name <input type="text" name="contact[company]" autocomplete="organization" required></label>
+          <label>Website <input type="url" name="contact[website]" placeholder="https://example.com" inputmode="url"></label>
+          <label>Business type <select name="contact[business_type]" required><option value="" disabled selected>Select your business type</option><option>Advertiser / Ecommerce Brand</option><option>Affiliate Network / Publisher</option><option>Agency</option><option>Other</option></select></label>
+        </div>
+        <label>What's your biggest reporting challenge? <textarea name="contact[body]" rows="4" placeholder="Tell us what you're trying to solve..." required></textarea></label>
+        <p class="tk-demo-privacy">We'll use your details to respond to your inquiry and help coordinate a demo.</p>
+        <button class="btn" type="submit">Continue to Scheduling →</button>
+        <p class="tk-demo-footnote">Step 1 of 2 · Submit inquiry, then choose a Calendly time.</p>
+      {% endif %}
+    {% endform %}
+  </div>
+</div>
+</section>
+<script>
+(function () {
+  var key = 'tk_demo_calendly_prefill_v1';
+  var form = document.getElementById('TraceKitDemoForm');
+  if (!form) return;
+  var success = form.querySelector('.tk-demo-success');
+  if (success) {
+    var url = success.getAttribute('data-calendly-base');
+    try {
+      var saved = JSON.parse(sessionStorage.getItem(key) || '{}');
+      var params = new URLSearchParams();
+      if (saved.name) params.set('name', saved.name);
+      if (saved.email) params.set('email', saved.email);
+      if (params.toString()) url += '?' + params.toString();
+      sessionStorage.removeItem(key);
+    } catch (e) {}
+    var link = success.querySelector('.tk-demo-calendar-link');
+    if (link) link.href = url;
+    window.setTimeout(function () { window.location.assign(url); }, 1600);
+    return;
+  }
+  form.addEventListener('submit', function () {
+    if (!form.checkValidity()) return;
+    var first = document.getElementById('tk-demo-first');
+    var last = document.getElementById('tk-demo-last');
+    var email = document.getElementById('tk-demo-email');
+    try {
+      sessionStorage.setItem(key, JSON.stringify({
+        name: [first && first.value.trim(), last && last.value.trim()].filter(Boolean).join(' '),
+        email: email ? email.value.trim() : ''
+      }));
+    } catch (e) {}
+  });
+})();
+</script>
+{% schema %}{"name":"TraceKit Demo Booking","settings":[],"presets":[{"name":"TraceKit Demo Booking"}]}{% endschema %}
