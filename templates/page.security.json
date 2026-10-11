@@ -1,0 +1,55 @@
+{
+  "sections": {
+    "main": {
+      "type": "tk-content-page",
+      "settings": {
+        "eyebrow": "TRUST & SECURITY",
+        "headline": "Trust starts with clear boundaries.",
+        "intro": "TraceKit's product direction emphasizes governed access, tenant context, auditable operations, and traceable evidence. Security questions deserve specific answers.",
+        "cta_text": "Book a Demo",
+        "note": "Do not interpret this page as a claim of SOC 2, ISO certification, or any unverified third-party audit.",
+        "show_contact": false,
+        "show_secondary_cta": true
+      },
+      "blocks": {
+        "feature_0": {
+          "type": "feature",
+          "settings": {
+            "heading": "Role-aware access",
+            "body": "Account membership and role boundaries determine which information and tools are available."
+          }
+        },
+        "feature_1": {
+          "type": "feature",
+          "settings": {
+            "heading": "Governed operations",
+            "body": "Sensitive actions should respect authorization, policy, and audit requirements."
+          }
+        },
+        "feature_2": {
+          "type": "feature",
+          "settings": {
+            "heading": "Source traceability",
+            "body": "Maintain source evidence and distinguish verified links from unresolved records."
+          }
+        },
+        "feature_3": {
+          "type": "feature",
+          "settings": {
+            "heading": "Security review",
+            "body": "Request current documentation about deployment, data handling, controls, and available assurances."
+          }
+        }
+      },
+      "block_order": [
+        "feature_0",
+        "feature_1",
+        "feature_2",
+        "feature_3"
+      ]
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
