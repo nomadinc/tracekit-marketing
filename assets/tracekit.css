@@ -1189,3 +1189,22 @@
    width:calc(50% - 5px)!important;box-sizing:border-box!important;
  }
 }
+
+/* Mobile Everything Connects: final vertical rhythm refinement */
+@media(max-width:600px){
+ .tk-connect-refined .tk-connect-core{
+   height:185px!important;
+ }
+ .tk-connect-refined .tk-connect-core b{
+   margin-top:12px!important;
+ }
+ .tk-connect-refined .approved-results{
+   gap:8px!important;
+ }
+ .tk-connect-refined .approved-results span{
+   padding:7px 9px!important;
+ }
+ .tk-connect-refined .approved-results i{
+   width:31px!important;height:31px!important;
+ }
+}
