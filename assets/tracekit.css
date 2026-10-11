@@ -1433,3 +1433,16 @@
  .tk-ip-cap-icon{width:62px;height:62px;border-radius:14px}
  .tk-ip-cap-icon svg{width:33px;height:33px}
 }
+
+/* Intelligence page mobile QA refinements — no homepage or desktop changes */
+@media(max-width:760px){
+  .tk-ip-section-head{margin-top:54px;margin-bottom:22px}
+  .tk-ip-cap-heading{margin-top:54px}
+  .tk-ip-mcp{margin-top:54px}
+  .tk-ip-cta{margin-top:54px;padding:24px;gap:18px}
+  .tk-ip-cta h2{font-size:clamp(30px,7.4vw,38px);line-height:1.12;margin:16px 0 10px}
+  .tk-ip-cta p{margin:0;line-height:1.55}
+  .tk-ip-cap-grid{gap:12px}
+  .tk-ip-cap-grid article{padding:19px 18px}
+  .tk-ip-cap-grid h3{margin:15px 0 9px}
+}
