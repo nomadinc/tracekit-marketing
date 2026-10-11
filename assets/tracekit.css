@@ -1423,3 +1423,13 @@
 }
 
 /* Shopify sync checkpoint: reconstructed Intelligence page styles (tk-ip). */
+
+/* Intelligence product page desktop refinement: tighter rhythm, stronger capability icons */
+@media(min-width:761px){
+ .tk-ip-section-head{margin-top:86px}
+ .tk-ip-cap-heading{margin-top:82px}
+ .tk-ip-mcp{margin-top:82px}
+ .tk-ip-cta{margin-top:82px}
+ .tk-ip-cap-icon{width:62px;height:62px;border-radius:14px}
+ .tk-ip-cap-icon svg{width:33px;height:33px}
+}
