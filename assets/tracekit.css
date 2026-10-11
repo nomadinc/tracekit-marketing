@@ -1560,3 +1560,5 @@
 .tk-price-final .btn{flex:none}
 @media(max-width:1150px){.tk-price-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.tk-price-desc{min-height:0}}
 @media(max-width:760px){.tk-price{padding:43px 0 65px}.tk-price-hero h1{font-size:clamp(38px,9vw,55px)}.tk-price-hero>p{font-size:15px}.tk-price-founding,.tk-price-enterprise,.tk-price-final{flex-direction:column;align-items:flex-start;padding:24px;gap:20px;margin:50px 0}.tk-price-founding .btn,.tk-price-enterprise .btn,.tk-price-final .btn{flex:none}.tk-price-section-title{margin:54px 0 23px}.tk-price-grid,.tk-price-benefits{grid-template-columns:1fr}.tk-price-card{padding:24px}.tk-price-price strong{font-size:44px}.tk-price-final h2{font-size:32px}}
+
+/* Shopify sync checkpoint: WS-018 pricing styles (tk-price). */
