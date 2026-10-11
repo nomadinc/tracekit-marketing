@@ -1,0 +1,63 @@
+{
+  "sections": {
+    "main": {
+      "type": "tk-content-page",
+      "settings": {
+        "eyebrow": "FREQUENTLY ASKED QUESTIONS",
+        "headline": "Common questions, clearer answers.",
+        "intro": "A starting point for understanding TraceKit's approach and what to verify before connecting your data.",
+        "cta_text": "Book a Demo",
+        "note": "Product availability may change as features are released.",
+        "show_contact": false,
+        "show_secondary_cta": true
+      },
+      "blocks": {
+        "feature_0": {
+          "type": "feature",
+          "settings": {
+            "heading": "Does TraceKit include Intelligence?",
+            "body": "TraceKit has a built-in Intelligence experience; external MCP clients are an additional access path, not a requirement."
+          }
+        },
+        "feature_1": {
+          "type": "feature",
+          "settings": {
+            "heading": "Does TraceKit connect every platform?",
+            "body": "No universal coverage is promised. Connector availability and supported event types should be confirmed for your account."
+          }
+        },
+        "feature_2": {
+          "type": "feature",
+          "settings": {
+            "heading": "Can I inspect source evidence?",
+            "body": "TraceKit's product architecture emphasizes preserving provider identifiers and evidence so relationships can be investigated."
+          }
+        },
+        "feature_3": {
+          "type": "feature",
+          "settings": {
+            "heading": "What happens to unmatched records?",
+            "body": "The intended approach is to preserve unresolved records rather than silently discard them."
+          }
+        },
+        "feature_4": {
+          "type": "feature",
+          "settings": {
+            "heading": "How do I get pricing?",
+            "body": "Contact the team to discuss current plans, data sources, and scope."
+          }
+        }
+      },
+      "block_order": [
+        "feature_0",
+        "feature_1",
+        "feature_2",
+        "feature_3",
+        "feature_4"
+      ]
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
