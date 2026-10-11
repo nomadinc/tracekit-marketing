@@ -1703,3 +1703,21 @@
 .tk-sol-disclaimer{color:#829bb9;font-size:11px;line-height:1.6;margin-top:20px}
 @media(max-width:1050px){.tk-sol-hero{grid-template-columns:1fr}.tk-sol-ecosystem{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:760px){.tk-sol{padding:43px 0 65px}.tk-sol-hero h1{font-size:clamp(38px,9vw,55px)}.tk-sol-hero p{font-size:15px}.tk-sol-hero-visual{padding:19px}.tk-sol-heading{margin:60px 0 23px}.tk-sol-heading h2,.tk-sol-proof h2{font-size:clamp(33px,8vw,45px)}.tk-sol-audiences,.tk-sol-cases,.tk-sol-ecosystem{grid-template-columns:1fr}.tk-sol-audience,.tk-sol-cases>div{padding:23px}.tk-sol-audience p{min-height:0}.tk-sol-proof{grid-template-columns:1fr;gap:23px;margin-top:60px;padding:25px}.tk-sol-ecosystem>div{padding:18px}.tk-sol-final{margin-top:60px;flex-direction:column;align-items:flex-start;padding:25px}.tk-sol-final .btn{flex:none}}
+
+/* Solutions desktop design review: balanced hero, icon tiles, tighter section rhythm */
+@media(min-width:1051px){
+  .tk-sol-hero{grid-template-columns:1.12fr .88fr;gap:40px}
+  .tk-sol-hero h1{font-size:clamp(43px,4.25vw,64px);line-height:1.08}
+}
+@media(min-width:761px){
+  .tk-sol-heading{margin-top:80px}
+  .tk-sol-proof{margin-top:76px}
+  .tk-sol-final{margin-top:76px}
+}
+.tk-sol-ecosystem>div{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:13px;min-height:115px}
+.tk-sol-ecosystem svg{display:block;color:#7eb8ff;flex:none}
+.tk-sol-ecosystem span{display:block}
+@media(max-width:760px){
+  .tk-sol-ecosystem>div{min-height:0;flex-direction:row;justify-content:flex-start;text-align:left;gap:16px}
+  .tk-sol-ecosystem svg{width:25px;height:25px}
+}
