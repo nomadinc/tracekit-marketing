@@ -1507,3 +1507,56 @@
   .tk-dir-process{margin-top:49px}
   .tk-dir-roadmap{margin:49px 0}
 }
+
+/* WS-018 brand-based pricing page */
+.tk-price{background:#050910;color:#f1f6ff;padding:85px 0 95px}
+.tk-price *{box-sizing:border-box}
+.tk-price em{font-style:normal;color:#398cff}
+.tk-price-hero{max-width:1050px}
+.tk-price-hero h1{font-size:clamp(44px,5.1vw,76px);letter-spacing:-.045em;line-height:1.06;margin:27px 0}
+.tk-price-hero>p{font-size:18px;line-height:1.7;color:#b0bfd4;max-width:860px}
+.tk-price-hero-actions{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin:30px 0 0}
+.tk-price-hero-actions span{font-size:12px;color:#93afce}
+.tk-price-founding{display:flex;align-items:center;justify-content:space-between;gap:30px;background:linear-gradient(120deg,#122f59,#09192d);border:1px solid #397dd2;border-radius:18px;padding:34px 38px;margin:65px 0 85px}
+.tk-price-founding h2{font-size:clamp(30px,3.4vw,46px);letter-spacing:-.04em;margin:18px 0 12px}
+.tk-price-founding p{font-size:15px;color:#b7c9e0;line-height:1.65;max-width:760px}
+.tk-price-founding small{display:block;color:#8ca7c7;line-height:1.6}
+.tk-price-founding .btn{flex:none}
+.tk-price-section-title{margin:65px 0 28px}
+.tk-price-section-title h2{font-size:clamp(34px,4vw,54px);letter-spacing:-.04em;margin:17px 0 9px}
+.tk-price-section-title p{font-size:16px;color:#a8bdd5;line-height:1.65}
+.tk-price-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}
+.tk-price-card{position:relative;display:flex;flex-direction:column;min-width:0;background:#0a1627;border:1px solid #274569;border-radius:17px;padding:27px 21px}
+.tk-price-popular{border-color:#368dff;background:linear-gradient(160deg,#102a4b,#0a1627)}
+.tk-price-recommend{font-size:9px;font-weight:800;letter-spacing:.07em;color:#9acaff;margin-bottom:13px}
+.tk-price-plan{font-size:25px;font-weight:800;letter-spacing:-.03em}
+.tk-price-desc{font-size:13px;color:#a8bad1;line-height:1.55;min-height:62px}
+.tk-price-price{display:flex;align-items:baseline;flex-wrap:wrap;gap:6px;margin:18px 0 4px}
+.tk-price-price strong{font-size:43px;letter-spacing:-.04em}
+.tk-price-price span{font-size:11px;color:#8db9f5}
+.tk-price-regular{font-size:12px;color:#a9b9ce}
+.tk-price-capacity{border-top:1px solid #2a4665;margin-top:22px;padding-top:20px;font-weight:800;font-size:15px}
+.tk-price-card-cta{margin:22px 0 18px;text-align:center;font-size:13px!important;white-space:normal}
+.tk-price-card ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.tk-price-card li{position:relative;padding-left:20px;color:#b5c6da;font-size:12px;line-height:1.55}
+.tk-price-card li:before{content:"✓";position:absolute;left:0;color:#62d3a7}
+.tk-price-note,.tk-price-availability{color:#8ea7c5;font-size:12px;line-height:1.7;margin:18px 0}
+.tk-price-enterprise{display:flex;align-items:center;justify-content:space-between;gap:30px;padding:37px;background:#0c1b31;border:1px solid #2c578b;border-radius:18px;margin:75px 0}
+.tk-price-enterprise h2{font-size:43px;margin:17px 0 8px}
+.tk-price-enterprise p{color:#afc0d6;font-size:15px;line-height:1.65;max-width:800px}
+.tk-price-enterprise small{color:#829ab9;font-size:11px}
+.tk-price-enterprise .btn{flex:none}
+.tk-price-benefits{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
+.tk-price-benefits>div{background:#0a1627;border:1px solid #274362;border-radius:14px;padding:25px}
+.tk-price-benefits strong{font-size:18px}
+.tk-price-benefits p{color:#a8bcd3;line-height:1.6;font-size:13px;margin-bottom:0}
+.tk-price-faq{border-top:1px solid #284663}
+.tk-price-faq details{border-bottom:1px solid #284663;padding:20px 0}
+.tk-price-faq summary{cursor:pointer;font-weight:700;font-size:17px}
+.tk-price-faq details p{color:#a8bfd9;font-size:14px;line-height:1.7;max-width:900px}
+.tk-price-final{margin-top:75px;display:flex;justify-content:space-between;align-items:center;gap:30px;padding:38px;background:linear-gradient(110deg,#112e55,#07172a);border:1px solid #2e69af;border-radius:18px}
+.tk-price-final h2{font-size:36px;letter-spacing:-.035em;margin:0 0 10px}
+.tk-price-final p{color:#b0c4dc}
+.tk-price-final .btn{flex:none}
+@media(max-width:1150px){.tk-price-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.tk-price-desc{min-height:0}}
+@media(max-width:760px){.tk-price{padding:43px 0 65px}.tk-price-hero h1{font-size:clamp(38px,9vw,55px)}.tk-price-hero>p{font-size:15px}.tk-price-founding,.tk-price-enterprise,.tk-price-final{flex-direction:column;align-items:flex-start;padding:24px;gap:20px;margin:50px 0}.tk-price-founding .btn,.tk-price-enterprise .btn,.tk-price-final .btn{flex:none}.tk-price-section-title{margin:54px 0 23px}.tk-price-grid,.tk-price-benefits{grid-template-columns:1fr}.tk-price-card{padding:24px}.tk-price-price strong{font-size:44px}.tk-price-final h2{font-size:32px}}
