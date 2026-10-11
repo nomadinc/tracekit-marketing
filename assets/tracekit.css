@@ -1208,3 +1208,11 @@
    width:31px!important;height:31px!important;
  }
 }
+
+/* Mobile customer journey: tighten space above and below the section only */
+@media(max-width:600px){
+  .tk-journey-section{
+    padding-top:34px!important;
+    padding-bottom:38px!important;
+  }
+}
