@@ -75,16 +75,17 @@
   var planValues = {starter:'Starter',growth:'Growth',scale:'Scale',agency:'Agency',enterprise:'Enterprise'};
   var selectedPlan = planValues[(query.get('plan') || '').toLowerCase()] || '';
   var fromPricing = query.get('source') === 'pricing';
-  var founding = fromPricing || query.get('intent') === 'founding';
+  var enterpriseInquiry = fromPricing && selectedPlan === 'Enterprise';
+  var founding = (fromPricing && !enterpriseInquiry) || query.get('intent') === 'founding';
   var planWrap = form.querySelector('#tk-demo-plan-wrap');
   var planSelect = form.querySelector('#tk-demo-plan');
-  if (founding) {
+  if (founding || enterpriseInquiry) {
     var heading = form.querySelector('h2');
-    if (heading) heading.textContent = 'Apply for Founding Access';
+    if (heading) heading.textContent = enterpriseInquiry ? 'Talk to Sales About Enterprise' : 'Apply for Founding Access';
     var lead = form.querySelector('.tk-demo-form-lead');
-    if (lead) lead.textContent = 'Tell us about your business. Your application is subject to review and approval.';
-    form.querySelector('#tk-demo-intent').value = 'Founding access application';
-    form.querySelector('#tk-demo-subject').value = 'TraceKit founding access application';
+    if (lead) lead.textContent = enterpriseInquiry ? 'Tell us about your requirements and we’ll discuss a custom plan.' : 'Tell us about your business. Your application is subject to review and approval.';
+    form.querySelector('#tk-demo-intent').value = enterpriseInquiry ? 'Enterprise sales inquiry' : 'Founding access application';
+    form.querySelector('#tk-demo-subject').value = enterpriseInquiry ? 'TraceKit Enterprise sales inquiry' : 'TraceKit founding access application';
     form.querySelector('#tk-demo-source').value = 'Pricing page';
     planWrap.hidden = false;
     planSelect.disabled = false;
