@@ -1324,3 +1324,100 @@
  .tk-demo-benefits{margin:26px 0}
  .tk-content-page .tk-demo-form-panel{padding:21px}
 }
+
+/* TraceKit Intelligence product page — independent of approved homepage */
+.tk-ip{background:#050910;color:#f1f6ff;padding:90px 0 95px}
+.tk-ip *{box-sizing:border-box}
+.tk-ip h1,.tk-ip h2,.tk-ip h3{letter-spacing:-.035em}
+.tk-ip em{font-style:normal;color:#3288ff}
+.tk-ip-kicker{display:inline-block;color:#78b7ff;border:1px solid #245286;background:#0b1c33;border-radius:99px;padding:8px 12px;font-size:11px;font-weight:800;letter-spacing:.09em}
+.tk-ip-hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.03fr);gap:48px;align-items:center}
+.tk-ip-hero-copy h1{font-size:clamp(43px,4.4vw,70px);line-height:1.06;margin:26px 0}
+.tk-ip-hero-copy>p{font-size:18px;line-height:1.7;color:#aabbd2;max-width:570px}
+.tk-ip-actions{display:flex;align-items:center;flex-wrap:wrap;gap:17px;margin-top:28px}
+.tk-ip-actions>span{font-size:12px;color:#90a9c7}
+.tk-ip-hero-visual{border:1px solid #2a527f;background:linear-gradient(155deg,#0d1b30,#060f1d);border-radius:19px;overflow:hidden;box-shadow:0 22px 70px #0005}
+.tk-ip-window-head{padding:20px 22px;display:flex;justify-content:space-between;align-items:center;gap:12px;border-bottom:1px solid #203955}
+.tk-ip-product{display:flex;align-items:center;gap:12px}
+.tk-ip-product img{width:44px;height:44px;object-fit:contain;background:#10213d;border:1px solid #357ef2;border-radius:10px;padding:5px}
+.tk-ip-product div{display:flex;flex-direction:column;gap:3px}
+.tk-ip-product strong{font-size:15px}
+.tk-ip-product small,.tk-ip-status{font-size:10px;color:#9ab3d0}
+.tk-ip-status{border:1px solid #2a5787;padding:5px 8px;border-radius:99px}
+.tk-ip-prompt{padding:18px 20px;margin:20px 22px 15px;background:#11233b;border:1px solid #2a4e79;border-radius:10px;display:flex;flex-direction:column;gap:9px}
+.tk-ip-prompt span,.tk-ip-result>span{font-size:10px;font-weight:800;letter-spacing:.08em;color:#83baff}
+.tk-ip-prompt strong{font-size:17px;line-height:1.4}
+.tk-ip-result{margin:0 22px 20px;border:1px solid #234263;background:#071323;border-radius:11px;padding:20px}
+.tk-ip-result-total{display:flex;align-items:baseline;justify-content:space-between;gap:10px;flex-wrap:wrap;margin:13px 0 18px}
+.tk-ip-result-total strong{font-size:27px}
+.tk-ip-result-total small{color:#9bb3ce;font-size:12px}
+.tk-ip-bars{display:grid;gap:12px}
+.tk-ip-bars>div{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px;font-size:12px;color:#d4e1f3}
+.tk-ip-bars b{color:#a7cbff}
+.tk-ip-bars i{display:block;grid-column:1/-1;width:var(--w);height:5px;background:linear-gradient(90deg,#2465df,#56b7ff);border-radius:99px}
+.tk-ip-bars i.unresolved{background:#d19a53}
+.tk-ip-result p{font-size:11px;line-height:1.65;color:#9fb3ce;margin:18px 0 0}
+.tk-ip-window-foot{border-top:1px solid #203955;display:flex;gap:8px;flex-wrap:wrap;padding:14px 22px}
+.tk-ip-window-foot span{border:1px solid #2b4a6b;color:#a7c5e8;padding:6px 9px;border-radius:7px;font-size:10px}
+.tk-ip-disclaimer{font-size:11px;color:#7d93b0;line-height:1.6;margin:18px 0 0}
+.tk-ip-section-head{max-width:770px;margin:105px 0 32px}
+.tk-ip-section-head h2{font-size:clamp(35px,4vw,53px);line-height:1.1;margin:22px 0 12px}
+.tk-ip-section-head p{font-size:17px;line-height:1.7;color:#a4b6ce}
+.tk-ip-investigation{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.tk-ip-investigation-left,.tk-ip-evidence{background:#0a1627;border:1px solid #244260;border-radius:17px;padding:30px}
+.tk-ip-step{color:#74b2ff;font-size:11px;font-weight:800;letter-spacing:.09em}
+.tk-ip-investigation-left h3{font-size:23px;margin:10px 0 8px}
+.tk-ip-investigation-left p{color:#a6bad3;font-size:14px;line-height:1.65;margin:0 0 28px}
+.tk-ip-investigation-left p:last-child{margin-bottom:0}
+.tk-ip-evidence-header{display:flex;justify-content:space-between;gap:12px;margin-bottom:20px}
+.tk-ip-evidence-header strong{font-size:18px}
+.tk-ip-evidence-header span{font-size:11px;color:#8eaccd}
+.tk-ip-evidence-row{display:grid;grid-template-columns:1fr auto;gap:8px;padding:16px 0;border-bottom:1px solid #253c58}
+.tk-ip-evidence-row span{font-size:14px;color:#d4e2f4}
+.tk-ip-evidence-row strong{font-size:13px}
+.tk-ip-evidence-row small{grid-column:1/-1;color:#6ed9b1;font-size:11px}
+.tk-ip-evidence-row .tk-ip-unresolved{color:#e2b274}
+.tk-ip-evidence-note{margin-top:30px;padding:20px;background:#0f2340;border:1px solid #2a568c;border-radius:10px}
+.tk-ip-evidence-note p{font-size:13px;line-height:1.7;color:#abc1db;margin:8px 0 0}
+.tk-ip-cap-heading{margin-top:100px}
+.tk-ip-cap-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}
+.tk-ip-cap-grid article{background:#0a1627;border:1px solid #213e60;border-radius:15px;padding:25px 21px}
+.tk-ip-cap-icon{display:grid;place-items:center;width:52px;height:52px;border:1px solid #2862a2;border-radius:12px;color:#76b8ff;background:#0d213c}
+.tk-ip-cap-icon svg{width:27px;height:27px}
+.tk-ip-cap-grid h3{font-size:20px;line-height:1.25;margin:21px 0 12px}
+.tk-ip-cap-grid p{font-size:13px;line-height:1.7;color:#a7bad2;margin:0}
+.tk-ip-mcp{display:grid;grid-template-columns:1.25fr .75fr;gap:40px;align-items:center;background:#091526;border:1px solid #264465;border-radius:18px;padding:40px;margin-top:100px}
+.tk-ip-mcp h2{font-size:clamp(32px,3.5vw,48px);line-height:1.12;margin:23px 0 18px}
+.tk-ip-mcp p{color:#a5bad4;font-size:15px;line-height:1.75}
+.tk-ip-mcp-clients{display:flex;flex-wrap:wrap;gap:13px;justify-content:center}
+.tk-ip-mcp-clients span{display:flex;flex-direction:column;align-items:center;gap:9px;color:#b5c6db}
+.tk-ip-mcp-clients img{width:65px;height:65px;object-fit:contain;background:#0e2038;border:1px solid #2b4b6c;border-radius:13px;padding:16px}
+.tk-ip-mcp-clients small{font-size:11px}
+.tk-ip-mcp-clients p{flex-basis:100%;font-size:11px;text-align:center;margin:8px 0 0}
+.tk-ip-cta{display:flex;justify-content:space-between;align-items:center;gap:35px;padding:42px;background:linear-gradient(120deg,#102c55,#08172d);border:1px solid #2a64a7;border-radius:18px;margin-top:100px}
+.tk-ip-cta h2{font-size:clamp(37px,4vw,53px);line-height:1.08;margin:20px 0 12px}
+.tk-ip-cta p{color:#b0c3dc;font-size:15px;line-height:1.6}
+.tk-ip-cta .btn{flex:none}
+@media(max-width:1050px){.tk-ip-hero{gap:28px}.tk-ip-cap-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){
+ .tk-ip{padding:42px 0 65px}
+ .tk-ip-hero,.tk-ip-investigation,.tk-ip-mcp{grid-template-columns:1fr}
+ .tk-ip-hero-copy h1{font-size:clamp(39px,9vw,54px)}
+ .tk-ip-hero-copy>p{font-size:15px}
+ .tk-ip-hero{gap:30px}
+ .tk-ip-section-head{margin:65px 0 25px}
+ .tk-ip-section-head h2{font-size:clamp(32px,8vw,43px)}
+ .tk-ip-investigation-left,.tk-ip-evidence{padding:23px}
+ .tk-ip-mcp{padding:26px;margin-top:65px;gap:22px}
+ .tk-ip-cta{margin-top:65px;padding:27px;flex-direction:column;align-items:flex-start}
+ .tk-ip-cta .btn{flex:none}
+}
+@media(max-width:480px){
+ .tk-ip-cap-grid{grid-template-columns:1fr}
+ .tk-ip-window-head{padding:15px}
+ .tk-ip-prompt{margin:14px}
+ .tk-ip-result{margin:0 14px 14px;padding:15px}
+ .tk-ip-window-foot{padding:13px}
+ .tk-ip-result-total strong{font-size:23px}
+ .tk-ip-mcp-clients img{width:57px;height:57px}
+}
