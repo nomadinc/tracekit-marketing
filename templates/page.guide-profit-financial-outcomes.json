@@ -1,0 +1,13 @@
+{
+  "sections": {
+    "main": {
+      "type": "tk-guide-article",
+      "settings": {
+        "guide_key": "profit-financial-outcomes"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
