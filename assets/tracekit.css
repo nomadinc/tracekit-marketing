@@ -1033,3 +1033,45 @@
    justify-self:start!important;
  }
 }
+
+/* Mobile integration redesign: equal logo tiles, controlled visual weights */
+@media(max-width:600px){
+ .integrations-v2{padding:30px 0 34px!important}
+ .integrations-v2 .integrations-title{font-size:19px!important;line-height:1.35!important;margin-bottom:22px!important}
+ .integrations-v2 .logo-lockups{
+   display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;
+   gap:12px!important;align-items:stretch!important;
+ }
+ .integrations-v2 .logo-lockups>.brand-lockup{
+   display:flex!important;align-items:center!important;justify-content:center!important;
+   width:100%!important;height:78px!important;min-height:78px!important;
+   max-height:none!important;min-width:0!important;
+   flex:none!important;justify-self:stretch!important;
+   padding:13px 10px!important;margin:0!important;
+   border:1px solid #1c3453!important;border-radius:12px!important;
+   background:#0b1524!important;box-sizing:border-box!important;
+   text-align:center!important;overflow:hidden!important;
+ }
+ .integrations-v2 .logo-lockups>.brand-lockup img{
+   display:block!important;width:auto!important;height:auto!important;
+   max-width:100%!important;max-height:39px!important;
+   object-fit:contain!important;margin:0!important;
+ }
+ .integrations-v2 .logo-lockups>.brand-lockup.everflow img{max-width:132px!important;max-height:30px!important}
+ .integrations-v2 .logo-lockups>.brand-lockup.shopify img{max-width:132px!important;max-height:36px!important}
+ .integrations-v2 .logo-lockups>.brand-lockup.commas img{max-width:135px!important;max-height:33px!important}
+ .integrations-v2 .logo-lockups>.brand-lockup.nmi img{max-width:105px!important;max-height:34px!important}
+ .integrations-v2 .logo-lockups>.brand-lockup.checkoutchamp img{max-width:135px!important;max-height:34px!important}
+ .integrations-v2 .logo-lockups>.brand-lockup.meta img{max-width:119px!important;max-height:34px!important}
+ .integrations-v2 .logo-lockups>.brand-lockup.tiktok img{max-width:112px!important;max-height:34px!important}
+ .integrations-v2 .logo-lockups>.brand-lockup.paypal img,
+ .integrations-v2 .logo-lockups>.brand-lockup.googleads img{max-width:28px!important;max-height:30px!important}
+ .integrations-v2 .logo-lockups>.brand-lockup.paypal span,
+ .integrations-v2 .logo-lockups>.brand-lockup.googleads span{font-size:14px!important}
+ .integrations-v2 .logo-lockups>.integrations-more{
+   grid-column:1/-1!important;justify-self:center!important;
+   width:auto!important;height:39px!important;min-height:39px!important;
+   margin:10px auto 0!important;padding:0 19px!important;
+   font-size:12px!important;
+ }
+}
