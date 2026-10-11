@@ -1,0 +1,55 @@
+{
+  "sections": {
+    "main": {
+      "type": "tk-content-page",
+      "settings": {
+        "eyebrow": "DOCUMENTATION",
+        "headline": "Build with confidence.",
+        "intro": "Find your way through TraceKit setup, integration concepts, access controls, and governed tooling. Detailed technical references will be added as they are validated.",
+        "cta_text": "Book a Demo",
+        "note": "Technical instructions must be verified against the deployed product before publication.",
+        "show_contact": false,
+        "show_secondary_cta": true
+      },
+      "blocks": {
+        "feature_0": {
+          "type": "feature",
+          "settings": {
+            "heading": "Getting started",
+            "body": "Understand account setup, organization context, and connection prerequisites."
+          }
+        },
+        "feature_1": {
+          "type": "feature",
+          "settings": {
+            "heading": "Integration concepts",
+            "body": "Learn how TraceKit preserves source identifiers and maps commerce and attribution identities."
+          }
+        },
+        "feature_2": {
+          "type": "feature",
+          "settings": {
+            "heading": "MCP and permissions",
+            "body": "Understand governed tool discovery and permission-aware access."
+          }
+        },
+        "feature_3": {
+          "type": "feature",
+          "settings": {
+            "heading": "Troubleshooting",
+            "body": "Review reconciliation gaps, source coverage, and audit evidence."
+          }
+        }
+      },
+      "block_order": [
+        "feature_0",
+        "feature_1",
+        "feature_2",
+        "feature_3"
+      ]
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
