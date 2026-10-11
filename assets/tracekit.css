@@ -943,3 +943,20 @@
 .tk-mcp-refined .tk-mcp-secondary{align-items:flex-start;flex-direction:column}
 .tk-mcp-refined .tk-mcp-secondary-logos img{width:34px;height:34px}
 }
+
+/* Three Questions: stronger icons and numbers, tighter section rhythm */
+@media(min-width:901px){
+ .tk-three-questions{padding-top:80px!important;padding-bottom:80px!important}
+ .tk-three-questions .pillars-v2 article{padding-top:31px;padding-bottom:31px;min-height:235px}
+}
+.tk-three-questions .pillars-v2 .pillar-symbol{
+ width:54px;height:54px;border:1px solid #2b6ebc;
+ border-radius:14px;background:#0b1b31;
+ color:#65b1ff;margin-bottom:28px;
+ box-shadow:0 0 18px rgba(29,111,237,.09);
+}
+.tk-three-questions .pillars-v2 .pillar-symbol svg{width:28px;height:28px;display:block}
+.tk-three-questions .pillars-v2 article>span{color:#517ab0}
+@media(max-width:900px){
+ .tk-three-questions .pillars-v2 .pillar-symbol{margin-bottom:20px}
+}
