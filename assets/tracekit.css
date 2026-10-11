@@ -1242,3 +1242,14 @@
     width:36px;height:36px;
   }
 }
+
+/* Mobile Three Questions: tighter section entry and card rhythm */
+@media(max-width:600px){
+  .tk-three-questions{
+    padding-top:38px!important;
+  }
+  .tk-three-questions .pillars-v2 article{
+    padding-top:22px!important;
+    padding-bottom:22px!important;
+  }
+}
