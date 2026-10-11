@@ -1,0 +1,31 @@
+{
+  "sections": {
+    "main": {
+      "type": "tk-content-page",
+      "settings": {
+        "eyebrow": "COOKIES",
+        "headline": "Cookie information.",
+        "intro": "This page is reserved for an approved cookie notice aligned with actual website behavior.",
+        "cta_text": "Book a Demo",
+        "note": "DRAFT — Cookie inventory and legal review required before publication.",
+        "show_contact": false,
+        "show_secondary_cta": false
+      },
+      "blocks": {
+        "feature_0": {
+          "type": "feature",
+          "settings": {
+            "heading": "Review required",
+            "body": "Document the cookies and similar technologies actually used, their purposes, and applicable choices."
+          }
+        }
+      },
+      "block_order": [
+        "feature_0"
+      ]
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
