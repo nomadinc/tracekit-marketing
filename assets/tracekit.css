@@ -1641,3 +1641,17 @@
   .tk-cj-event{position:relative}
   .tk-cj-event:before{content:"";position:absolute;top:29px;left:-17px;width:17px;height:2px;background:#397fc9}
 }
+
+/* Customer Journey mobile approval refinements: section rhythm, capability cards, financial summaries */
+@media(max-width:760px){
+  .tk-cj-section-head{margin-top:49px;margin-bottom:19px}
+  .tk-cj-outcome{margin-top:49px}
+  .tk-cj-final{margin-top:49px}
+  .tk-cj-benefits{gap:10px}
+  .tk-cj-benefits article{padding:17px 19px}
+  .tk-cj-benefits h3{margin:12px 0 8px}
+  .tk-cj-benefits p{line-height:1.6}
+  .tk-cj-stats{gap:8px;margin:20px 0}
+  .tk-cj-stats>div{padding:12px 15px;gap:6px}
+  .tk-cj-stats strong{font-size:26px}
+}
