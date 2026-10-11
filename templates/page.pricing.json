@@ -1,44 +1,8 @@
 {
   "sections": {
     "main": {
-      "type": "tk-content-page",
-      "settings": {
-        "eyebrow": "PLANS & PRICING",
-        "headline": "A plan built around your business.",
-        "intro": "TraceKit's needs vary with data sources, transaction volume, users, and the level of visibility your team requires. Let's find the right fit.",
-        "cta_text": "Book a Demo",
-        "note": "Pricing and plan availability are subject to confirmation. No prices are published here.",
-        "show_contact": false,
-        "show_secondary_cta": true
-      },
-      "blocks": {
-        "feature_0": {
-          "type": "feature",
-          "settings": {
-            "heading": "Connected data",
-            "body": "Discuss the platforms, stores, networks, and financial sources you need to bring together."
-          }
-        },
-        "feature_1": {
-          "type": "feature",
-          "settings": {
-            "heading": "Team access",
-            "body": "Review the roles, organizations, and visibility your team needs."
-          }
-        },
-        "feature_2": {
-          "type": "feature",
-          "settings": {
-            "heading": "Intelligence and workflows",
-            "body": "Identify the reporting, investigations, and governed capabilities most important to you."
-          }
-        }
-      },
-      "block_order": [
-        "feature_0",
-        "feature_1",
-        "feature_2"
-      ]
+      "type": "tk-pricing-page",
+      "settings": {}
     }
   },
   "order": [
