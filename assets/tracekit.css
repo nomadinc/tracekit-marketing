@@ -1223,3 +1223,22 @@
     padding-top:38px!important;
   }
 }
+
+/* Intelligence mobile QA: compact section ending and named MCP client icons */
+.tk-mcp-refined .tk-mcp-secondary-logos>span{
+  display:flex;flex-direction:column;align-items:center;gap:6px;min-width:0;
+}
+.tk-mcp-refined .tk-mcp-secondary-logos>span small{
+  color:#9eb1cc;font-size:10px;line-height:1.3;white-space:nowrap;
+}
+@media(max-width:600px){
+  .tk-mcp-refined.approved-ai-section{
+    padding-bottom:40px!important;
+  }
+  .tk-mcp-refined .tk-mcp-secondary-logos{
+    gap:15px!important;
+  }
+  .tk-mcp-refined .tk-mcp-secondary-logos>span img{
+    width:36px;height:36px;
+  }
+}
