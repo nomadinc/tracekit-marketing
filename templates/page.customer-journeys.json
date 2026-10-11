@@ -1,0 +1,55 @@
+{
+  "sections": {
+    "main": {
+      "type": "tk-content-page",
+      "settings": {
+        "eyebrow": "CUSTOMER JOURNEY TRACKING",
+        "headline": "See the story behind every customer.",
+        "intro": "TraceKit connects available acquisition, identity, commerce, and financial evidence into a traceable journey—so you can understand what happened after the click.",
+        "cta_text": "Book a Demo",
+        "note": "Completeness depends on available source data and supported integrations.",
+        "show_contact": false,
+        "show_secondary_cta": true
+      },
+      "blocks": {
+        "feature_0": {
+          "type": "feature",
+          "settings": {
+            "heading": "From click to customer",
+            "body": "Follow known identifiers and deterministic relationships between traffic, identity, and commerce."
+          }
+        },
+        "feature_1": {
+          "type": "feature",
+          "settings": {
+            "heading": "Beyond the first order",
+            "body": "Preserve upsells, subscriptions, rebills, refunds, disputes, and adjustments as distinct events."
+          }
+        },
+        "feature_2": {
+          "type": "feature",
+          "settings": {
+            "heading": "Evidence at every step",
+            "body": "Inspect the source identifiers and records supporting each connection."
+          }
+        },
+        "feature_3": {
+          "type": "feature",
+          "settings": {
+            "heading": "Honest about gaps",
+            "body": "See unresolved attribution and missing links rather than hiding them."
+          }
+        }
+      },
+      "block_order": [
+        "feature_0",
+        "feature_1",
+        "feature_2",
+        "feature_3"
+      ]
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
