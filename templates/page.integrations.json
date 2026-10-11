@@ -1,60 +1,8 @@
 {
   "sections": {
     "main": {
-      "type": "tk-content-page",
-      "settings": {
-        "eyebrow": "CONNECTED ECOSYSTEM",
-        "headline": "Bring your business data together.",
-        "intro": "TraceKit is designed to connect evidence across acquisition, attribution, commerce, and financial systems. Integration availability and depth vary by provider.",
-        "cta_text": "Book a Demo",
-        "note": "Featured platform logos indicate ecosystem relevance, not universal live connector availability.",
-        "show_contact": false,
-        "show_secondary_cta": true
-      },
-      "blocks": {
-        "feature_0": {
-          "type": "feature",
-          "settings": {
-            "heading": "Advertising and traffic",
-            "body": "Connect relevant campaign and traffic evidence to customer journeys where supported."
-          }
-        },
-        "feature_1": {
-          "type": "feature",
-          "settings": {
-            "heading": "Affiliate attribution",
-            "body": "Preserve provider click and transaction identifiers and reconcile them with commercial activity."
-          }
-        },
-        "feature_2": {
-          "type": "feature",
-          "settings": {
-            "heading": "Commerce and checkout",
-            "body": "Relate orders, upsells, subscriptions, refunds, and other events without flattening their source history."
-          }
-        },
-        "feature_3": {
-          "type": "feature",
-          "settings": {
-            "heading": "Payments and disputes",
-            "body": "Bring payment, refund, and chargeback evidence into the financial picture when supported."
-          }
-        },
-        "feature_4": {
-          "type": "feature",
-          "settings": {
-            "heading": "Integration status",
-            "body": "Confirm the specific connector, permissions, sync scope, and readiness for your environment before deployment."
-          }
-        }
-      },
-      "block_order": [
-        "feature_0",
-        "feature_1",
-        "feature_2",
-        "feature_3",
-        "feature_4"
-      ]
+      "type": "tk-integrations-page",
+      "settings": {}
     }
   },
   "order": [
