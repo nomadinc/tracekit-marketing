@@ -960,3 +960,36 @@
 @media(max-width:900px){
  .tk-three-questions .pillars-v2 .pillar-symbol{margin-bottom:20px}
 }
+
+/* TraceKit secondary pages — scoped; homepage styling unchanged */
+.tk-content-page{background:#050910;color:#f1f5fc;padding:88px 0 96px;min-height:65vh}
+.tk-content-page .tk-page-hero{max-width:850px}
+.tk-content-page .tk-page-eyebrow{display:inline-block;color:#76b5ff;background:#0c1c32;border:1px solid #1d477d;border-radius:99px;padding:8px 13px;font-size:11px;font-weight:750;letter-spacing:.1em}
+.tk-content-page h1{font-size:clamp(40px,5.5vw,70px);line-height:1.07;letter-spacing:-.045em;margin:25px 0 20px;color:#f1f6ff}
+.tk-content-page .tk-page-hero>p{font-size:clamp(16px,1.7vw,20px);line-height:1.7;color:#aab9cd;max-width:750px;margin:0 0 27px}
+.tk-content-page .tk-page-note{font-size:12px;line-height:1.6;color:#9bb2d1;border-left:2px solid #2b83e9;padding:12px 16px;margin:26px 0 0;background:#091728;max-width:850px}
+.tk-content-page .tk-page-features{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:58px}
+.tk-content-page .tk-page-feature,.tk-content-page .tk-page-faq{background:linear-gradient(150deg,#0b1728,#080e19);border:1px solid #1e3859;border-radius:14px;padding:28px;min-width:0}
+.tk-content-page .tk-page-feature-index{font-size:12px;font-weight:700;color:#67a7ff}
+.tk-content-page .tk-page-feature h2{font-size:22px;line-height:1.25;margin:17px 0 12px;letter-spacing:-.02em}
+.tk-content-page .tk-page-feature p,.tk-content-page .tk-page-faq p{font-size:15px;line-height:1.7;color:#a7b7cd;margin:0}
+.tk-content-page .tk-page-faq summary{cursor:pointer;font-weight:700;font-size:17px;color:#edf4ff}
+.tk-content-page .tk-page-faq p{margin-top:16px}
+.tk-content-page .tk-page-bottom{display:flex;align-items:center;justify-content:space-between;gap:30px;margin-top:65px;padding:32px;border:1px solid #24518a;background:linear-gradient(100deg,#0d2140,#081322);border-radius:16px}
+.tk-content-page .tk-page-bottom h2{font-size:27px;margin:0 0 9px}
+.tk-content-page .tk-page-bottom p{color:#a9b9ce;margin:0}
+.tk-content-page .tk-page-contact{margin-top:55px;padding:32px;border:1px solid #24518a;background:#0b1727;border-radius:16px;max-width:880px}
+.tk-content-page .tk-page-contact h2{font-size:27px;margin:0 0 25px}
+.tk-content-page .tk-page-form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.tk-content-page .tk-page-contact label{display:flex;flex-direction:column;gap:8px;font-size:13px;color:#cbd9eb;margin-bottom:18px}
+.tk-content-page .tk-page-contact input,.tk-content-page .tk-page-contact select,.tk-content-page .tk-page-contact textarea{width:100%;min-width:0;background:#07111f;color:#f1f6ff;border:1px solid #31506f;border-radius:9px;padding:13px 14px;font:inherit}
+.tk-content-page .tk-page-contact :is(input,select,textarea):focus-visible{outline:2px solid #65aaff;outline-offset:2px}
+.tk-content-page .tk-page-contact .btn{border:0;cursor:pointer}
+@media(max-width:700px){
+ .tk-content-page{padding:55px 0 70px}
+ .tk-content-page .tk-page-features{grid-template-columns:1fr;margin-top:35px}
+ .tk-content-page .tk-page-feature,.tk-content-page .tk-page-faq{padding:22px}
+ .tk-content-page .tk-page-bottom{flex-direction:column;align-items:flex-start;margin-top:40px;padding:24px}
+ .tk-content-page .tk-page-form-grid{grid-template-columns:1fr;gap:0}
+ .tk-content-page .tk-page-contact{padding:20px}
+}
