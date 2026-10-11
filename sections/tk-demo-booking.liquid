@@ -21,7 +21,21 @@
         <h2>Book Your Personalized Demo</h2>
         <p class="tk-demo-form-lead">First, tell us a little about your business.</p>
         {% if form.errors %}<div role="alert">{{ form.errors | default_errors }}</div>{% endif %}
-        <input type="hidden" name="contact[subject]" value="TraceKit demo inquiry">
+        <input type="hidden" name="contact[subject]" id="tk-demo-subject" value="TraceKit demo inquiry">
+        <input type="hidden" name="contact[inquiry_type]" id="tk-demo-intent" value="General demo inquiry">
+        <input type="hidden" name="contact[lead_source]" id="tk-demo-source" value="Website">
+        <div class="tk-demo-plan-wrap" id="tk-demo-plan-wrap" hidden>
+          <label for="tk-demo-plan">Plan of interest</label>
+          <select id="tk-demo-plan" name="contact[plan_interest]" disabled>
+            <option value="Not selected">Please select a plan</option>
+            <option value="Starter">Starter — 1 brand</option>
+            <option value="Growth">Growth — up to 3 brands</option>
+            <option value="Scale">Scale — up to 10 brands</option>
+            <option value="Agency">Agency — up to 5 client advertisers</option>
+            <option value="Enterprise">Enterprise — custom</option>
+            <option value="Undecided">Not sure yet</option>
+          </select>
+        </div>
         <div class="tk-page-form-grid">
           <label>First name <input type="text" name="contact[first_name]" id="tk-demo-first" autocomplete="given-name" required></label>
           <label>Last name <input type="text" name="contact[last_name]" id="tk-demo-last" autocomplete="family-name" required></label>
@@ -56,6 +70,25 @@
     var link = success.querySelector('.tk-demo-calendar-link');
     if (link) link.href = calendly;
     return;
+  }
+  var query = new URLSearchParams(window.location.search);
+  var planValues = {starter:'Starter',growth:'Growth',scale:'Scale',agency:'Agency',enterprise:'Enterprise'};
+  var selectedPlan = planValues[(query.get('plan') || '').toLowerCase()] || '';
+  var fromPricing = query.get('source') === 'pricing';
+  var founding = fromPricing || query.get('intent') === 'founding';
+  var planWrap = form.querySelector('#tk-demo-plan-wrap');
+  var planSelect = form.querySelector('#tk-demo-plan');
+  if (founding) {
+    var heading = form.querySelector('h2');
+    if (heading) heading.textContent = 'Apply for Founding Access';
+    var lead = form.querySelector('.tk-demo-form-lead');
+    if (lead) lead.textContent = 'Tell us about your business. Your application is subject to review and approval.';
+    form.querySelector('#tk-demo-intent').value = 'Founding access application';
+    form.querySelector('#tk-demo-subject').value = 'TraceKit founding access application';
+    form.querySelector('#tk-demo-source').value = 'Pricing page';
+    planWrap.hidden = false;
+    planSelect.disabled = false;
+    planSelect.value = selectedPlan || 'Not selected';
   }
   var button = form.querySelector('button[type="submit"]');
   var error = form.querySelector('.tk-demo-submit-error');
