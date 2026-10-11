@@ -1,0 +1,41 @@
+/* TraceKit editorial guide articles */
+.tk-guide{background:#050910;color:#f1f6ff;padding:65px 0 95px}
+.tk-guide *{box-sizing:border-box}
+.tk-guide-back{color:#83baff;text-decoration:none;font-size:14px;font-weight:700}
+.tk-guide-hero{max-width:1040px;padding:60px 0 50px}
+.tk-guide-hero h1{font-size:clamp(42px,5.4vw,76px);letter-spacing:-.045em;line-height:1.07;margin:26px 0}
+.tk-guide-hero>p{font-size:19px;line-height:1.7;color:#b2c5db;max-width:850px}
+.tk-guide-meta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.tk-guide-meta span{font-size:10px;letter-spacing:.08em;color:#88b9f2;border:1px solid #315985;border-radius:99px;padding:9px 12px;font-weight:800}
+.tk-guide-layout{display:grid;grid-template-columns:260px minmax(0,1fr);gap:75px;align-items:start}
+.tk-guide-sidebar{position:sticky;top:35px;background:#0a182b;border:1px solid #2a4d74;border-radius:15px;padding:24px;display:grid;gap:20px}
+.tk-guide-sidebar>strong{font-size:11px;letter-spacing:.1em;color:#83baff}
+.tk-guide-sidebar nav{display:grid;gap:14px}
+.tk-guide-sidebar a{color:#afc4df;text-decoration:none;font-size:12px;line-height:1.5}
+.tk-guide-sidebar a:hover{color:#6cb1ff}
+.tk-guide-article{min-width:0}
+.tk-guide-article>section{padding:10px 0 45px;margin-bottom:45px;border-bottom:1px solid #284766;scroll-margin-top:30px}
+.tk-guide-index{font-size:11px;color:#7eb8ff;font-weight:800;letter-spacing:.08em}
+.tk-guide-article h2{font-size:clamp(29px,3vw,44px);letter-spacing:-.035em;line-height:1.2;margin:17px 0}
+.tk-guide-article section>p{font-size:17px;color:#b4c5da;line-height:1.85;max-width:830px}
+.tk-guide-diagram{display:grid;gap:15px;background:linear-gradient(115deg,#102d51,#0b1b31);border:1px solid #33649d;border-radius:14px;padding:30px;margin-top:28px}
+.tk-guide-diagram span{font-size:10px;color:#8bbdff;letter-spacing:.1em;font-weight:800}
+.tk-guide-diagram strong{font-size:clamp(19px,2.4vw,30px);line-height:1.4;letter-spacing:-.025em}
+.tk-guide-insight{background:#0c1b30;border-left:3px solid #459cff;padding:22px 25px;margin-top:27px}
+.tk-guide-insight strong{color:#87bdff;font-size:12px;text-transform:uppercase;letter-spacing:.08em}
+.tk-guide-insight p{color:#c0d0e4;font-size:15px;line-height:1.7;margin-bottom:0}
+.tk-guide blockquote{margin:25px 0 0;border-left:3px solid #459cff;background:#102844;padding:25px;font-size:19px;font-weight:700;line-height:1.6}
+.tk-guide-next{padding:32px;border:1px solid #315b8b;border-radius:16px;background:#0b1d35}
+.tk-guide-next>span{font-size:10px;letter-spacing:.09em;color:#8dbfff;font-weight:800}
+.tk-guide-next h2{font-size:30px;margin:17px 0 10px}
+.tk-guide-next p{font-size:14px;color:#b3c7df;line-height:1.7}
+.tk-guide-next>div{display:flex;flex-wrap:wrap;gap:15px;margin-top:20px}
+.tk-guide-next a{color:#8dbfff;text-decoration:none;font-size:13px;font-weight:700}
+.tk-guide-cta{display:flex;justify-content:space-between;align-items:center;gap:35px;background:linear-gradient(115deg,#12325c,#091a30);border:1px solid #3575b9;border-radius:18px;padding:38px;margin-top:90px}
+.tk-guide-cta h2{font-size:clamp(31px,3.5vw,47px);letter-spacing:-.04em;margin:18px 0 12px}
+.tk-guide-cta p{font-size:15px;color:#b4c7df;line-height:1.7}
+.tk-guide-cta .btn{flex:none}
+.tk-guide-note{font-size:11px;color:#8ba5c4;line-height:1.7;margin-top:20px}
+@media(max-width:960px){.tk-guide-layout{grid-template-columns:1fr;gap:25px}.tk-guide-sidebar{position:static}.tk-guide-sidebar nav{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){.tk-guide{padding:35px 0 65px}.tk-guide-hero{padding:43px 0 28px}.tk-guide-hero h1{font-size:clamp(37px,9vw,52px)}.tk-guide-hero>p{font-size:15px}.tk-guide-sidebar{padding:19px}.tk-guide-sidebar nav{grid-template-columns:1fr}.tk-guide-article>section{padding-bottom:30px;margin-bottom:32px}.tk-guide-article section>p{font-size:15px;line-height:1.75}.tk-guide-diagram{padding:22px}.tk-guide-insight{padding:18px}.tk-guide-cta{flex-direction:column;align-items:flex-start;margin-top:55px;padding:24px}.tk-guide-cta .btn{flex:none}.tk-guide-next{padding:22px}}
+
