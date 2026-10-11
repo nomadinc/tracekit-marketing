@@ -1492,3 +1492,5 @@
 @media(max-width:1000px){.tk-dir-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:760px){.tk-dir{padding:43px 0 65px}.tk-dir-hero h1{font-size:clamp(38px,9vw,54px)}.tk-dir-hero p{font-size:15px}.tk-dir-notice{margin:30px 0 55px}.tk-dir-head{display:block}.tk-dir-search{margin-top:20px;min-width:0}.tk-dir-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.tk-dir-card{padding:12px}.tk-dir-logo{height:75px;padding:9px}.tk-dir-logo img{max-height:48px}.tk-dir-logo>span{font-size:16px}.tk-dir-card-foot{margin-top:12px}.tk-dir-card-foot strong{font-size:14px}.tk-dir-process{grid-template-columns:1fr;margin-top:60px;padding:24px;gap:20px}.tk-dir-roadmap{margin:60px 0}.tk-dir-cta{flex-direction:column;align-items:flex-start;padding:25px}.tk-dir-cta h2{font-size:29px}}
 @media(max-width:390px){.tk-dir-grid{grid-template-columns:1fr}.tk-dir-logo{height:88px}}
+
+/* Shopify sync checkpoint: Integrations directory styles (tk-dir). */
