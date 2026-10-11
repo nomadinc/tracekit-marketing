@@ -1,0 +1,55 @@
+{
+  "sections": {
+    "main": {
+      "type": "tk-content-page",
+      "settings": {
+        "eyebrow": "SOLUTIONS",
+        "headline": "Built for performance operators.",
+        "intro": "Whether you're running paid traffic, managing affiliates, or reconciling ecommerce revenue, TraceKit helps connect the evidence behind your numbers.",
+        "cta_text": "Book a Demo",
+        "note": "Capabilities and integration coverage depend on your connected systems.",
+        "show_contact": false,
+        "show_secondary_cta": true
+      },
+      "blocks": {
+        "feature_0": {
+          "type": "feature",
+          "settings": {
+            "heading": "Advertisers",
+            "body": "Understand acquisition performance alongside purchases, refunds, disputes, and costs."
+          }
+        },
+        "feature_1": {
+          "type": "feature",
+          "settings": {
+            "heading": "Affiliate teams",
+            "body": "Trace clicks, conversions, source identifiers, and downstream commerce events."
+          }
+        },
+        "feature_2": {
+          "type": "feature",
+          "settings": {
+            "heading": "Ecommerce operators",
+            "body": "Follow customers across orders, upsells, and financial adjustments."
+          }
+        },
+        "feature_3": {
+          "type": "feature",
+          "settings": {
+            "heading": "Finance and operations",
+            "body": "Investigate reconciliation gaps with source-level evidence and clear exceptions."
+          }
+        }
+      },
+      "block_order": [
+        "feature_0",
+        "feature_1",
+        "feature_2",
+        "feature_3"
+      ]
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
