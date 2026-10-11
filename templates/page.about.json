@@ -1,0 +1,47 @@
+{
+  "sections": {
+    "main": {
+      "type": "tk-content-page",
+      "settings": {
+        "eyebrow": "ABOUT TRACEKIT",
+        "headline": "Built for answers you can verify.",
+        "intro": "TraceKit is focused on a simple problem: business data is fragmented across platforms, while decisions depend on seeing the full picture.",
+        "cta_text": "Book a Demo",
+        "note": "Company history and team biographies can be added when approved.",
+        "show_contact": false,
+        "show_secondary_cta": true
+      },
+      "blocks": {
+        "feature_0": {
+          "type": "feature",
+          "settings": {
+            "heading": "Our mission",
+            "body": "Connect clicks, customers, commercial events, and financial evidence into a clearer operational picture."
+          }
+        },
+        "feature_1": {
+          "type": "feature",
+          "settings": {
+            "heading": "Our approach",
+            "body": "Preserve source records, favor deterministic relationships, and make unresolved information visible."
+          }
+        },
+        "feature_2": {
+          "type": "feature",
+          "settings": {
+            "heading": "Our philosophy",
+            "body": "Track. Reconcile. Trust. Answers should be explainable, not merely attractive."
+          }
+        }
+      },
+      "block_order": [
+        "feature_0",
+        "feature_1",
+        "feature_2"
+      ]
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
