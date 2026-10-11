@@ -1,0 +1,13 @@
+{
+  "sections": {
+    "main": {
+      "type": "tk-guide-article",
+      "settings": {
+        "guide_key": "tracekit-intelligence-guide"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
