@@ -1831,3 +1831,7 @@
 .tk-guide-note{font-size:11px;color:#8ba5c4;line-height:1.7;margin-top:20px}
 @media(max-width:960px){.tk-guide-layout{grid-template-columns:1fr;gap:25px}.tk-guide-sidebar{position:static}.tk-guide-sidebar nav{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:760px){.tk-guide{padding:35px 0 65px}.tk-guide-hero{padding:43px 0 28px}.tk-guide-hero h1{font-size:clamp(37px,9vw,52px)}.tk-guide-hero>p{font-size:15px}.tk-guide-sidebar{padding:19px}.tk-guide-sidebar nav{grid-template-columns:1fr}.tk-guide-article>section{padding-bottom:30px;margin-bottom:32px}.tk-guide-article section>p{font-size:15px;line-height:1.75}.tk-guide-diagram{padding:22px}.tk-guide-insight{padding:18px}.tk-guide-cta{flex-direction:column;align-items:flex-start;margin-top:55px;padding:24px}.tk-guide-cta .btn{flex:none}.tk-guide-next{padding:22px}}
+
+/* Resources article links replace expandable excerpts */
+.tk-res-guide-link{display:flex;justify-content:space-between;gap:15px;border-top:1px solid #2c4d71;margin-top:auto;padding-top:18px;color:#83baff;font-size:14px;font-weight:700;text-decoration:none}
+.tk-res-guide-link:hover{color:#c1ddff}
