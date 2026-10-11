@@ -32,6 +32,7 @@
         </div>
         <label>What's your biggest reporting challenge? <textarea name="contact[body]" rows="4" placeholder="Tell us what you're trying to solve..." required></textarea></label>
         <p class="tk-demo-privacy">We'll use your details to respond to your inquiry and help coordinate a demo.</p>
+        <div class="tk-demo-submit-error" role="alert" aria-live="assertive" hidden></div>
         <button class="btn" type="submit">Continue to Scheduling →</button>
         <p class="tk-demo-footnote">Step 1 of 2 · Submit inquiry, then choose a Calendly time.</p>
       {% endif %}
@@ -41,36 +42,73 @@
 </section>
 <script>
 (function () {
-  var key = 'tk_demo_calendly_prefill_v1';
   var form = document.getElementById('TraceKitDemoForm');
   if (!form) return;
+  var calendly = 'https://calendly.com/anthony-trace-kit/30min';
+  function schedulingUrl(name, email) {
+    var url = new URL(calendly);
+    if (name) url.searchParams.set('name', name);
+    if (email) url.searchParams.set('email', email);
+    return url.toString();
+  }
   var success = form.querySelector('.tk-demo-success');
   if (success) {
-    var url = success.getAttribute('data-calendly-base');
-    try {
-      var saved = JSON.parse(sessionStorage.getItem(key) || '{}');
-      var params = new URLSearchParams();
-      if (saved.name) params.set('name', saved.name);
-      if (saved.email) params.set('email', saved.email);
-      if (params.toString()) url += '?' + params.toString();
-      sessionStorage.removeItem(key);
-    } catch (e) {}
     var link = success.querySelector('.tk-demo-calendar-link');
-    if (link) link.href = url;
-    window.setTimeout(function () { window.location.assign(url); }, 1600);
+    if (link) link.href = calendly;
     return;
   }
-  form.addEventListener('submit', function () {
-    if (!form.checkValidity()) return;
-    var first = document.getElementById('tk-demo-first');
-    var last = document.getElementById('tk-demo-last');
-    var email = document.getElementById('tk-demo-email');
+  var button = form.querySelector('button[type="submit"]');
+  var error = form.querySelector('.tk-demo-submit-error');
+  var busy = false;
+  form.addEventListener('submit', async function (event) {
+    event.preventDefault();
+    if (busy || !form.reportValidity()) return;
+    busy = true;
+    if (error) { error.hidden = true; error.textContent = ''; }
+    if (button) { button.disabled = true; button.textContent = 'Submitting inquiry…'; }
+    var first = (form.querySelector('#tk-demo-first') || {}).value || '';
+    var last = (form.querySelector('#tk-demo-last') || {}).value || '';
+    var email = (form.querySelector('#tk-demo-email') || {}).value || '';
+    var data = new FormData(form);
+    data.set('contact[name]', [first.trim(), last.trim()].filter(Boolean).join(' '));
     try {
-      sessionStorage.setItem(key, JSON.stringify({
-        name: [first && first.value.trim(), last && last.value.trim()].filter(Boolean).join(' '),
-        email: email ? email.value.trim() : ''
-      }));
-    } catch (e) {}
+      var response = await fetch(form.action, {
+        method: 'POST',
+        body: data,
+        credentials: 'same-origin',
+        redirect: 'follow',
+        headers: { 'Accept': 'text/html' }
+      });
+      var html = await response.text();
+      var documentResult = new DOMParser().parseFromString(html, 'text/html');
+      var successMarker = documentResult.querySelector('.tk-demo-success');
+      var hasError = documentResult.querySelector('.errors, .form__message--error, [data-form-error]');
+      if (!response.ok || !successMarker || hasError) {
+        throw new Error('Unable to confirm Shopify accepted this submission.');
+      }
+      var url = schedulingUrl([first.trim(),last.trim()].filter(Boolean).join(' '),email.trim());
+      form.innerHTML = '<div class="tk-demo-success" role="status"><h2>Inquiry received. Choose your demo time.</h2><p>Your inquiry was submitted successfully. Calendly will confirm the meeting separately.</p><a class="btn tk-demo-calendar-link" rel="noopener">Choose a demo time →</a></div>';
+      var link = form.querySelector('.tk-demo-calendar-link');
+      if (link) link.href = url;
+      window.location.assign(url);
+    } catch (e) {
+      if (error) {
+        error.textContent = 'We could not confirm the submission. Please check your inbox for a notification before trying again, or use the scheduling link below.';
+        error.hidden = false;
+      }
+      var fallback = form.querySelector('.tk-demo-calendar-fallback');
+      if (!fallback) {
+        fallback = document.createElement('a');
+        fallback.className = 'tk-demo-calendar-fallback';
+        fallback.href = calendly;
+        fallback.textContent = 'Open Calendly directly →';
+        fallback.rel = 'noopener';
+        if (error) error.insertAdjacentElement('afterend', fallback);
+      }
+    } finally {
+      busy = false;
+      if (button && button.isConnected) { button.disabled = false; button.textContent = 'Continue to Scheduling →'; }
+    }
   });
 })();
 </script>
