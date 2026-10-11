@@ -1494,3 +1494,16 @@
 @media(max-width:390px){.tk-dir-grid{grid-template-columns:1fr}.tk-dir-logo{height:88px}}
 
 /* Shopify sync checkpoint: Integrations directory styles (tk-dir). */
+
+/* Integrations mobile review: compact cards and consistent section rhythm */
+@media(max-width:760px){
+  .tk-dir-notice{margin:26px 0 46px;padding:16px 18px}
+  .tk-dir-grid{row-gap:10px}
+  .tk-dir-card{padding:11px}
+  .tk-dir-logo{height:65px;padding:8px}
+  .tk-dir-logo img{max-height:44px}
+  .tk-dir-card-foot{margin-top:10px}
+  .tk-dir-card>small{margin-top:6px}
+  .tk-dir-process{margin-top:49px}
+  .tk-dir-roadmap{margin:49px 0}
+}
