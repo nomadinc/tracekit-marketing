@@ -1216,3 +1216,10 @@
     padding-bottom:38px!important;
   }
 }
+
+/* Mobile TraceKit Intelligence: reduce gap after Customer Journey */
+@media(max-width:600px){
+  .tk-mcp-refined.approved-ai-section{
+    padding-top:38px!important;
+  }
+}
