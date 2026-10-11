@@ -1,0 +1,47 @@
+{
+  "sections": {
+    "main": {
+      "type": "tk-content-page",
+      "settings": {
+        "eyebrow": "GET IN TOUCH",
+        "headline": "Talk to the TraceKit team.",
+        "intro": "Have a question about the platform, integrations, partnerships, or your account? Send us a message and we'll route your inquiry.",
+        "cta_text": "",
+        "note": "Use the form below to contact the team.",
+        "show_contact": true,
+        "show_secondary_cta": false
+      },
+      "blocks": {
+        "feature_0": {
+          "type": "feature",
+          "settings": {
+            "heading": "Product questions",
+            "body": "Ask about capabilities, supported workflows, and implementation requirements."
+          }
+        },
+        "feature_1": {
+          "type": "feature",
+          "settings": {
+            "heading": "Partnerships",
+            "body": "Discuss integration partnerships or collaboration opportunities."
+          }
+        },
+        "feature_2": {
+          "type": "feature",
+          "settings": {
+            "heading": "Support",
+            "body": "For account-specific support, avoid sending passwords or other secrets through this form."
+          }
+        }
+      },
+      "block_order": [
+        "feature_0",
+        "feature_1",
+        "feature_2"
+      ]
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
