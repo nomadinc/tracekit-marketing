@@ -1,0 +1,67 @@
+<section class="tk-content-page">
+  <div class="tk-shell">
+    <div class="tk-page-hero">
+      <span class="tk-page-eyebrow">{{ section.settings.eyebrow | escape }}</span>
+      <h1>{{ section.settings.headline | escape }}</h1>
+      <p>{{ section.settings.intro | escape }}</p>
+      {% if section.settings.cta_text != blank %}<a class="btn" href="{{ section.settings.cta_url | default: '/pages/book-a-demo' }}">{{ section.settings.cta_text | escape }} →</a>{% endif %}
+    </div>
+    {% if section.settings.note != blank %}<p class="tk-page-note">{{ section.settings.note | escape }}</p>{% endif %}
+    {% if section.blocks.size > 0 %}
+      <div class="tk-page-features">
+        {% for block in section.blocks %}
+          {% case block.type %}
+            {% when 'feature' %}
+              <article class="tk-page-feature" {{ block.shopify_attributes }}>
+                <span class="tk-page-feature-index">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span>
+                <h2>{{ block.settings.heading | escape }}</h2>
+                <p>{{ block.settings.body | escape }}</p>
+              </article>
+            {% when 'question' %}
+              <details class="tk-page-faq" {{ block.shopify_attributes }}><summary>{{ block.settings.heading | escape }}</summary><p>{{ block.settings.body | escape }}</p></details>
+          {% endcase %}
+        {% endfor %}
+      </div>
+    {% endif %}
+    {% if section.settings.show_contact %}
+      <div class="tk-page-contact">
+        <h2>Tell us what you're looking to solve.</h2>
+        {% form 'contact' %}
+          {% if form.posted_successfully? %}<p role="status">Thanks — your message has been submitted.</p>{% endif %}
+          {% if form.errors %}<div role="alert">{{ form.errors | default_errors }}</div>{% endif %}
+          <div class="tk-page-form-grid">
+            <label>Your name<input type="text" name="contact[name]" autocomplete="name" required></label>
+            <label>Work email<input type="email" name="contact[email]" autocomplete="email" required></label>
+            <label>Company<input type="text" name="contact[company]" autocomplete="organization"></label>
+            <label>What can we help with?<select name="contact[topic]"><option>Product demo</option><option>Pricing</option><option>Integrations</option><option>Partnership</option><option>General inquiry</option></select></label>
+          </div>
+          <label>Tell us about your business<textarea name="contact[body]" rows="5" required></textarea></label>
+          <button class="btn" type="submit">Send inquiry →</button>
+        {% endform %}
+      </div>
+    {% endif %}
+    {% if section.settings.show_secondary_cta %}
+      <div class="tk-page-bottom"><div><h2>Ready to connect the dots?</h2><p>Explore what TraceKit could help your team investigate and understand.</p></div><a class="btn" href="/pages/book-a-demo">Book a Demo →</a></div>
+    {% endif %}
+  </div>
+</section>
+{% schema %}
+{
+  "name":"TraceKit Content Page",
+  "settings":[
+    {"type":"text","id":"eyebrow","label":"Eyebrow","default":"TRACEKIT"},
+    {"type":"text","id":"headline","label":"Headline","default":"Understand your business."},
+    {"type":"textarea","id":"intro","label":"Introduction","default":"Explore the TraceKit platform."},
+    {"type":"text","id":"cta_text","label":"Primary CTA text","default":"Book a Demo"},
+    {"type":"url","id":"cta_url","label":"Primary CTA URL"},
+    {"type":"textarea","id":"note","label":"Disclosure or note"},
+    {"type":"checkbox","id":"show_contact","label":"Show contact form","default":false},
+    {"type":"checkbox","id":"show_secondary_cta","label":"Show closing CTA","default":true}
+  ],
+  "blocks":[
+    {"type":"feature","name":"Feature card","settings":[{"type":"text","id":"heading","label":"Heading"},{"type":"textarea","id":"body","label":"Body"}]},
+    {"type":"question","name":"FAQ","settings":[{"type":"text","id":"heading","label":"Question"},{"type":"textarea","id":"body","label":"Answer"}]}
+  ],
+  "presets":[{"name":"TraceKit Content Page"}]
+}
+{% endschema %}
