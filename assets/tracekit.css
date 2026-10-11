@@ -1294,3 +1294,33 @@
  }
  .tk-footer-bottom span,.tk-footer-bottom span:last-child{text-align:center!important}
 }
+
+/* Demo booking page — independent of the approved homepage */
+.tk-demo-page{padding:84px 0 95px}
+.tk-demo-layout{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:58px;align-items:start}
+.tk-demo-intro{padding-top:16px}
+.tk-demo-intro h1{font-size:clamp(39px,4.4vw,62px);line-height:1.08;letter-spacing:-.045em;margin:24px 0}
+.tk-demo-intro>p{color:#afc0d6;font-size:17px;line-height:1.7;max-width:540px}
+.tk-demo-benefits{display:grid;gap:18px;margin:38px 0}
+.tk-demo-benefits>div{border-left:2px solid #338dff;padding-left:17px}
+.tk-demo-benefits strong{color:#f1f6ff;font-size:15px}
+.tk-demo-benefits p{font-size:13px;line-height:1.65;color:#94a9c5;margin:6px 0 0}
+.tk-demo-intro .tk-demo-disclosure{font-size:12px;color:#8196b1}
+.tk-content-page .tk-demo-form-panel{margin:0;max-width:none;padding:32px}
+.tk-demo-form-panel .tk-demo-form-lead{font-size:14px;color:#aabdd3;margin:-12px 0 25px}
+.tk-demo-form-panel .tk-demo-privacy,.tk-demo-form-panel .tk-demo-footnote{font-size:11px;color:#8da3c0;line-height:1.5}
+.tk-demo-form-panel .tk-demo-footnote{margin:15px 0 0}
+.tk-demo-form-panel .tk-demo-success{display:flex;flex-direction:column;align-items:flex-start;gap:14px}
+.tk-demo-success-mark{display:grid;place-items:center;width:46px;height:46px;border:1px solid #2cae81;border-radius:50%;color:#75edbd;background:#092b24;font-size:25px}
+.tk-demo-success h2{font-size:27px;line-height:1.2;margin:0}
+.tk-demo-success p{color:#adc0d8;font-size:15px;line-height:1.65;margin:0}
+.tk-demo-success small{font-size:11px;color:#849ab7}
+@media(max-width:850px){
+ .tk-demo-page{padding:45px 0 65px}
+ .tk-demo-layout{grid-template-columns:1fr;gap:28px}
+ .tk-demo-intro{padding-top:0}
+ .tk-demo-intro h1{font-size:clamp(35px,9vw,48px)}
+ .tk-demo-intro>p{font-size:15px}
+ .tk-demo-benefits{margin:26px 0}
+ .tk-content-page .tk-demo-form-panel{padding:21px}
+}
