@@ -1,0 +1,55 @@
+{
+  "sections": {
+    "main": {
+      "type": "tk-content-page",
+      "settings": {
+        "eyebrow": "RECONCILIATION & PROFIT",
+        "headline": "Know what the numbers actually mean.",
+        "intro": "Revenue is only part of the story. TraceKit helps connect commerce and financial evidence so teams can investigate profit, adjustments, and discrepancies.",
+        "cta_text": "Book a Demo",
+        "note": "Profit calculations depend on available costs, source coverage, and configured definitions.",
+        "show_contact": false,
+        "show_secondary_cta": true
+      },
+      "blocks": {
+        "feature_0": {
+          "type": "feature",
+          "settings": {
+            "heading": "Preserve the source",
+            "body": "Keep original provider identifiers and raw evidence available for investigation."
+          }
+        },
+        "feature_1": {
+          "type": "feature",
+          "settings": {
+            "heading": "Connect related events",
+            "body": "Relate base orders, upsells, subscriptions, refunds, and disputes without collapsing distinct transactions."
+          }
+        },
+        "feature_2": {
+          "type": "feature",
+          "settings": {
+            "heading": "Surface discrepancies",
+            "body": "Keep unmatched and unresolved records visible for review."
+          }
+        },
+        "feature_3": {
+          "type": "feature",
+          "settings": {
+            "heading": "Make better decisions",
+            "body": "Explore the factors behind reported performance, with limitations clearly identified."
+          }
+        }
+      },
+      "block_order": [
+        "feature_0",
+        "feature_1",
+        "feature_2",
+        "feature_3"
+      ]
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
