@@ -1253,3 +1253,18 @@
     padding-bottom:22px!important;
   }
 }
+
+/* Mobile section rhythm: consistent separation between approved homepage sections */
+@media(max-width:600px){
+  /* Integration strip -> Ask Your Business Anything */
+  .integrations-v2{padding-bottom:28px!important}
+  .tk-intelligence-section{padding-top:38px!important}
+
+  /* Intelligence demo -> Everything Connects */
+  .tk-intelligence-section{padding-bottom:38px!important}
+  #solutions.section{padding-top:38px!important}
+
+  /* Everything Connects -> Customer Journey */
+  #solutions.section{padding-bottom:38px!important}
+  .tk-journey-section{padding-top:38px!important}
+}
