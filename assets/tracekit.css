@@ -915,3 +915,31 @@
  .tk-mcp-refined .tk-mcp-affiliate-table>div{grid-template-columns:minmax(0,1fr) auto;gap:4px 9px}
  .tk-mcp-refined .tk-mcp-affiliate-table small{grid-column:2;text-align:right}
 }
+
+/* Built-in Intelligence is primary; external MCP is an optional extension. */
+.tk-mcp-refined .section-copy h2 em{color:#388bff}
+.tk-mcp-refined .tk-intelligence-built-in{display:flex;flex-direction:column;gap:5px;margin:19px 0 6px;padding-left:14px;border-left:2px solid #318bff}
+.tk-mcp-refined .tk-intelligence-built-in strong{font-size:14px;color:#eaf3ff}
+.tk-mcp-refined .tk-intelligence-built-in span{font-size:12px;color:#94abc8}
+.tk-mcp-refined .tk-intelligence-product-head{display:flex;align-items:center;gap:12px;padding:20px 26px;border-bottom:1px solid #203653}
+.tk-mcp-refined .tk-intelligence-product-icon{display:grid;place-items:center;width:48px;height:48px;flex:none;background:#0b1a32;border:1px solid #327df2;border-radius:12px;box-shadow:0 0 14px rgba(28,115,255,.2)}
+.tk-mcp-refined .tk-intelligence-product-icon img{width:36px;height:36px;object-fit:contain}
+.tk-mcp-refined .tk-intelligence-product-head>div{display:flex;flex-direction:column;gap:4px}
+.tk-mcp-refined .tk-intelligence-product-head strong{font-size:15px;color:#f1f6ff}
+.tk-mcp-refined .tk-intelligence-product-head small{font-size:11px;color:#9db0ca}
+.tk-mcp-refined .tk-intelligence-native-label{margin-left:auto;border:1px solid #2a5c9a;border-radius:99px;padding:5px 9px;font-size:10px;color:#8fc4ff;white-space:nowrap}
+.tk-mcp-refined .tk-mcp-secondary{display:flex;justify-content:space-between;align-items:center;gap:15px;border-top:1px solid #203653;padding-top:15px;margin-top:2px}
+.tk-mcp-refined .tk-mcp-secondary strong{font-size:12px;color:#e9f2ff}
+.tk-mcp-refined .tk-mcp-secondary p{font-size:10px;line-height:1.5;color:#91a5c0;margin:5px 0 0}
+.tk-mcp-refined .tk-mcp-secondary-logos{display:flex;gap:7px;flex:none}
+.tk-mcp-refined .tk-mcp-secondary-logos img{width:29px;height:29px;padding:6px;object-fit:contain;border:1px solid #28405e;background:#0d1929;border-radius:7px}
+.tk-journey-section .journey-copy{max-width:850px}
+.tk-journey-section .journey-copy p{max-width:800px;line-height:1.65}
+.tk-journey-section .journey-copy p+p{margin-top:12px}
+@media(max-width:600px){
+.tk-mcp-refined .tk-intelligence-product-head{padding:15px 14px;gap:9px}
+.tk-mcp-refined .tk-intelligence-product-head strong{font-size:13px}
+.tk-mcp-refined .tk-intelligence-native-label{font-size:9px;padding:4px 7px}
+.tk-mcp-refined .tk-mcp-secondary{align-items:flex-start;flex-direction:column}
+.tk-mcp-refined .tk-mcp-secondary-logos img{width:34px;height:34px}
+}
