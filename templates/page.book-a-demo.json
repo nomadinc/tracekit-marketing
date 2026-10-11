@@ -1,0 +1,47 @@
+{
+  "sections": {
+    "main": {
+      "type": "tk-content-page",
+      "settings": {
+        "eyebrow": "BOOK A DEMO",
+        "headline": "See your business more clearly.",
+        "intro": "Tell us about your data sources, attribution challenges, and reporting goals. We'll discuss how TraceKit could fit your workflows.",
+        "cta_text": "",
+        "note": "Let's talk about your business.",
+        "show_contact": true,
+        "show_secondary_cta": false
+      },
+      "blocks": {
+        "feature_0": {
+          "type": "feature",
+          "settings": {
+            "heading": "What to expect",
+            "body": "A focused conversation about your acquisition channels, commerce systems, reconciliation needs, and priorities."
+          }
+        },
+        "feature_1": {
+          "type": "feature",
+          "settings": {
+            "heading": "What to prepare",
+            "body": "Bring a list of platforms you use and a few questions your current reporting cannot answer."
+          }
+        },
+        "feature_2": {
+          "type": "feature",
+          "settings": {
+            "heading": "After the conversation",
+            "body": "We'll outline relevant product capabilities, dependencies, and sensible next steps."
+          }
+        }
+      },
+      "block_order": [
+        "feature_0",
+        "feature_1",
+        "feature_2"
+      ]
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
