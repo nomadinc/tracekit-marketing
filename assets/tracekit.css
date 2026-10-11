@@ -1114,3 +1114,14 @@
    max-width:146px!important;max-height:42px!important;
  }
 }
+
+/* Mobile Intelligence: give the day-over-day comparison breathing room */
+@media(max-width:600px){
+ .tk-intelligence-section .tk-demo-metric{
+   gap:16px!important;
+ }
+ .tk-intelligence-section .tk-demo-metric .up{
+   padding-right:8px!important;
+   flex-shrink:0;
+ }
+}
