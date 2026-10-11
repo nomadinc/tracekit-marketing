@@ -1,0 +1,31 @@
+{
+  "sections": {
+    "main": {
+      "type": "tk-content-page",
+      "settings": {
+        "eyebrow": "TERMS",
+        "headline": "Terms of service.",
+        "intro": "This page is reserved for TraceKit's approved terms of service.",
+        "cta_text": "Book a Demo",
+        "note": "DRAFT — This is not a binding terms-of-service document. Do not publish until approved legal content is supplied.",
+        "show_contact": false,
+        "show_secondary_cta": false
+      },
+      "blocks": {
+        "feature_0": {
+          "type": "feature",
+          "settings": {
+            "heading": "Legal review required",
+            "body": "Insert the reviewed agreement covering service terms, permitted use, disclaimers, and other applicable provisions."
+          }
+        }
+      },
+      "block_order": [
+        "feature_0"
+      ]
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
