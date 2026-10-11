@@ -1626,3 +1626,18 @@
 @media(max-width:760px){.tk-cj{padding:43px 0 65px}.tk-cj-hero h1{font-size:clamp(38px,9vw,54px)}.tk-cj-hero p{font-size:15px}.tk-cj-hero-graphic{padding:14px 8px}.tk-cj-hero-graphic>div{padding:15px 5px}.tk-cj-hero-graphic strong{font-size:12px}.tk-cj-hero-graphic span{font-size:8px}.tk-cj-hero-graphic small{font-size:9px}.tk-cj-section-head{margin:60px 0 22px}.tk-cj-section-head h2{font-size:clamp(32px,8vw,44px)}.tk-cj-demo{padding:17px}.tk-cj-demo-head{align-items:flex-start;flex-direction:column}.tk-cj-stats{grid-template-columns:1fr;gap:9px}.tk-cj-stats>div{padding:15px}.tk-cj-stats strong{font-size:27px}.tk-cj-event summary{gap:9px;padding:13px 10px}.tk-cj-index{width:31px;height:31px}.tk-cj-event-main strong{font-size:13px}.tk-cj-event-main small{font-size:10px}.tk-cj-type{font-size:9px;padding:4px 6px}.tk-cj-event-detail{padding:14px}.tk-cj-benefits{grid-template-columns:1fr;gap:11px}.tk-cj-benefits article{padding:21px}.tk-cj-outcome{grid-template-columns:1fr;gap:20px;padding:24px;margin-top:60px}.tk-cj-final{margin-top:60px;padding:25px;flex-direction:column;align-items:flex-start}.tk-cj-final .btn{flex:none}}
 
 /* Shopify sync checkpoint: Customer Journey product page styles (tk-cj). */
+
+/* Customer Journey desktop review refinements: headline, connected timeline, rhythm */
+@media(min-width:1051px){
+  .tk-cj-hero{grid-template-columns:1.1fr .9fr;gap:34px}
+  .tk-cj-hero h1{font-size:clamp(42px,4.25vw,63px);line-height:1.08}
+}
+@media(min-width:761px){
+  .tk-cj-section-head{margin-top:84px}
+  .tk-cj-outcome{margin-top:74px}
+  .tk-cj-final{margin-top:74px}
+  .tk-cj-timeline{position:relative;gap:12px;padding-left:16px}
+  .tk-cj-timeline:before{content:"";position:absolute;top:28px;bottom:28px;left:0;width:2px;background:linear-gradient(#3c90ff,#2a6fbc,#4e78b6);border-radius:2px}
+  .tk-cj-event{position:relative}
+  .tk-cj-event:before{content:"";position:absolute;top:29px;left:-17px;width:17px;height:2px;background:#397fc9}
+}
