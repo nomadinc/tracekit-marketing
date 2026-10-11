@@ -993,3 +993,11 @@
  .tk-content-page .tk-page-form-grid{grid-template-columns:1fr;gap:0}
  .tk-content-page .tk-page-contact{padding:20px}
 }
+
+/* Mobile integration strip: compact rows and legible official logo lockups */
+@media(max-width:600px){
+ .integrations-v2 .logo-lockups{row-gap:25px!important}
+ .integrations-v2 .brand-lockup.nmi.supplied-logo img{max-width:118px!important;max-height:37px!important}
+ .integrations-v2 .brand-lockup.meta.supplied-logo img{max-width:108px!important;max-height:32px!important}
+ .integrations-v2 .brand-lockup.tiktok.supplied-logo img{max-width:102px!important;max-height:31px!important}
+}
