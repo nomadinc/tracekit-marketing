@@ -1721,3 +1721,13 @@
   .tk-sol-ecosystem>div{min-height:0;flex-direction:row;justify-content:flex-start;text-align:left;gap:16px}
   .tk-sol-ecosystem svg{width:25px;height:25px}
 }
+
+/* Solutions mobile final review: compact problem cards and consistent section rhythm */
+@media(max-width:760px){
+  .tk-sol-cases>div{padding:20px}
+  .tk-sol-cases h3{margin:14px 0 10px}
+  .tk-sol-cases p{line-height:1.6}
+  .tk-sol-heading{margin-top:51px;margin-bottom:20px}
+  .tk-sol-proof{margin-top:51px}
+  .tk-sol-final{margin-top:51px}
+}
