@@ -83,7 +83,9 @@
       var documentResult = new DOMParser().parseFromString(html, 'text/html');
       var successMarker = documentResult.querySelector('.tk-demo-success');
       var hasError = documentResult.querySelector('.errors, .form__message--error, [data-form-error]');
-      if (!response.ok || !successMarker || hasError) {
+      var responseUrl = new URL(response.url, window.location.href);
+      var shopifyConfirmed = responseUrl.searchParams.get('contact_posted') === 'true';
+      if (!response.ok || hasError || (!successMarker && !shopifyConfirmed)) {
         throw new Error('Unable to confirm Shopify accepted this submission.');
       }
       var url = schedulingUrl([first.trim(),last.trim()].filter(Boolean).join(' '),email.trim());
