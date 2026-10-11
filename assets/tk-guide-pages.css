@@ -39,3 +39,12 @@
 @media(max-width:960px){.tk-guide-layout{grid-template-columns:1fr;gap:25px}.tk-guide-sidebar{position:static}.tk-guide-sidebar nav{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:760px){.tk-guide{padding:35px 0 65px}.tk-guide-hero{padding:43px 0 28px}.tk-guide-hero h1{font-size:clamp(37px,9vw,52px)}.tk-guide-hero>p{font-size:15px}.tk-guide-sidebar{padding:19px}.tk-guide-sidebar nav{grid-template-columns:1fr}.tk-guide-article>section{padding-bottom:30px;margin-bottom:32px}.tk-guide-article section>p{font-size:15px;line-height:1.75}.tk-guide-diagram{padding:22px}.tk-guide-insight{padding:18px}.tk-guide-cta{flex-direction:column;align-items:flex-start;margin-top:55px;padding:24px}.tk-guide-cta .btn{flex:none}.tk-guide-next{padding:22px}}
 
+
+/* Guide desktop review: connected concept diagrams and tighter article rhythm */
+.tk-guide-flow{display:flex;align-items:stretch;gap:10px;margin-top:5px}
+.tk-guide-flow-step{flex:1;min-width:0;border:1px solid #396fa8;border-radius:11px;background:#091b32;padding:17px;display:flex;flex-direction:column;justify-content:center;gap:10px}
+.tk-guide-flow-step small{font-size:10px;letter-spacing:.08em;color:#80baff;font-weight:800}
+.tk-guide-flow-step strong{font-size:clamp(14px,1.45vw,19px);line-height:1.35;overflow-wrap:anywhere}
+.tk-guide-flow-arrow{align-self:center;color:#6eaeff;font-size:23px;font-weight:700}
+@media(min-width:761px){.tk-guide-article>section{padding-bottom:39px;margin-bottom:39px}}
+@media(max-width:760px){.tk-guide-flow{flex-direction:column;gap:7px}.tk-guide-flow-step{padding:15px}.tk-guide-flow-arrow{transform:rotate(90deg)}.tk-guide-flow-step strong{font-size:16px}}
