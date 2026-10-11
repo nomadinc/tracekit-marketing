@@ -1446,3 +1446,49 @@
   .tk-ip-cap-grid article{padding:19px 18px}
   .tk-ip-cap-grid h3{margin:15px 0 9px}
 }
+
+/* TraceKit Integrations directory — isolated secondary page */
+.tk-dir{background:#050910;color:#f1f6ff;padding:85px 0 90px}
+.tk-dir *{box-sizing:border-box}
+.tk-dir em{font-style:normal;color:#3a8cff}
+.tk-dir-hero{max-width:980px}
+.tk-dir-hero h1{font-size:clamp(45px,5.1vw,76px);letter-spacing:-.045em;line-height:1.06;margin:26px 0}
+.tk-dir-hero p{color:#a8bbd2;font-size:18px;line-height:1.7;max-width:830px;margin:0 0 26px}
+.tk-dir-notice{border:1px solid #28517d;border-left:3px solid #3689ff;background:#0a1b31;border-radius:10px;padding:18px 21px;margin:45px 0 70px;color:#aebfd5;font-size:13px;line-height:1.7}
+.tk-dir-notice strong{color:#f0f5ff}
+.tk-dir-head{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:24px}
+.tk-dir-head h2,.tk-dir-process h2,.tk-dir-roadmap h2{font-size:clamp(32px,3.5vw,49px);letter-spacing:-.04em;line-height:1.12;margin:18px 0 9px}
+.tk-dir-head p,.tk-dir-process p,.tk-dir-roadmap p{color:#a6bad2;line-height:1.7;font-size:15px}
+.tk-dir-search{min-width:270px;display:grid;gap:8px}
+.tk-dir-search label{font-size:12px;color:#9ab7d8}
+.tk-dir-search input{border:1px solid #2a4b72;background:#0b192b;color:#fff;border-radius:10px;padding:13px 15px;width:100%;font:inherit}
+.tk-dir-filters{display:flex;gap:9px;flex-wrap:wrap;margin:26px 0}
+.tk-dir-filters button{border:1px solid #29496e;border-radius:99px;padding:10px 16px;background:#0a192b;color:#a6c3e7;cursor:pointer;font:inherit;font-size:13px}
+.tk-dir-filters button.active,.tk-dir-filters button:hover{border-color:#388bff;color:#fff;background:#123766}
+.tk-dir-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}
+.tk-dir-card{border:1px solid #243e5c;background:#091526;border-radius:16px;padding:20px;min-width:0}
+.tk-dir-card[hidden]{display:none!important}
+.tk-dir-logo{height:100px;border-radius:11px;background:#07111e;display:flex;justify-content:center;align-items:center;padding:17px}
+.tk-dir-logo img{max-width:100%;max-height:67px;width:auto;height:auto;object-fit:contain}
+.tk-dir-logo>span{color:#e7f1ff;font-size:21px;font-weight:800;text-align:center}
+.tk-dir-card-foot{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:9px;margin-top:17px}
+.tk-dir-card-foot strong{font-size:16px}
+.tk-dir-tag{border:1px solid #316394;background:#102c4b;color:#a7d1ff;border-radius:99px;padding:5px 8px;font-size:10px;white-space:nowrap}
+.tk-dir-tag-muted{border-color:#4b4d60;background:#202436;color:#b8bdd0}
+.tk-dir-card>small{display:block;color:#849dbb;font-size:12px;margin-top:8px}
+.tk-dir-empty{padding:25px;color:#b4c7df}
+.tk-dir-process{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;margin-top:90px;padding:42px;background:#0a1a30;border:1px solid #244b7b;border-radius:18px}
+.tk-dir-process-steps{display:grid;gap:12px}
+.tk-dir-process-steps>div{display:grid;grid-template-columns:34px 1fr;gap:3px 14px;border:1px solid #294b70;background:#0a1729;border-radius:11px;padding:17px}
+.tk-dir-process-steps b{grid-row:span 2;color:#6aaaff;font-size:13px}
+.tk-dir-process-steps strong{font-size:16px}
+.tk-dir-process-steps span{font-size:13px;line-height:1.6;color:#a2b7d0}
+.tk-dir-roadmap{margin:85px 0;max-width:840px}
+.tk-dir-roadmap .btn{margin-top:16px}
+.tk-dir-cta{display:flex;align-items:center;justify-content:space-between;gap:30px;border:1px solid #2c64a6;border-radius:17px;padding:35px;background:linear-gradient(120deg,#112e54,#07162a)}
+.tk-dir-cta h2{font-size:32px;letter-spacing:-.03em;margin:0 0 9px}
+.tk-dir-cta p{color:#b0c4dc;margin:0;line-height:1.6}
+.tk-dir-cta .btn{flex:none}
+@media(max-width:1000px){.tk-dir-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:760px){.tk-dir{padding:43px 0 65px}.tk-dir-hero h1{font-size:clamp(38px,9vw,54px)}.tk-dir-hero p{font-size:15px}.tk-dir-notice{margin:30px 0 55px}.tk-dir-head{display:block}.tk-dir-search{margin-top:20px;min-width:0}.tk-dir-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.tk-dir-card{padding:12px}.tk-dir-logo{height:75px;padding:9px}.tk-dir-logo img{max-height:48px}.tk-dir-logo>span{font-size:16px}.tk-dir-card-foot{margin-top:12px}.tk-dir-card-foot strong{font-size:14px}.tk-dir-process{grid-template-columns:1fr;margin-top:60px;padding:24px;gap:20px}.tk-dir-roadmap{margin:60px 0}.tk-dir-cta{flex-direction:column;align-items:flex-start;padding:25px}.tk-dir-cta h2{font-size:29px}}
+@media(max-width:390px){.tk-dir-grid{grid-template-columns:1fr}.tk-dir-logo{height:88px}}
