@@ -1,0 +1,55 @@
+{
+  "sections": {
+    "main": {
+      "type": "tk-content-page",
+      "settings": {
+        "eyebrow": "BUILT-IN INTELLIGENCE",
+        "headline": "Answers grounded in your business evidence.",
+        "intro": "TraceKit Intelligence helps teams explore connected business records, investigate discrepancies, and ask better questions from within TraceKit.",
+        "cta_text": "Book a Demo",
+        "note": "Examples on this website are illustrative; tool availability depends on product readiness and account permissions.",
+        "show_contact": false,
+        "show_secondary_cta": true
+      },
+      "blocks": {
+        "feature_0": {
+          "type": "feature",
+          "settings": {
+            "heading": "Ask better questions",
+            "body": "Move from a business question to the relevant source records, identities, and financial events."
+          }
+        },
+        "feature_1": {
+          "type": "feature",
+          "settings": {
+            "heading": "Investigate attribution",
+            "body": "Explore how customer activity, affiliate traffic, purchases, and disputes relate, while separating attribution from causation."
+          }
+        },
+        "feature_2": {
+          "type": "feature",
+          "settings": {
+            "heading": "Understand what is unresolved",
+            "body": "Preserve missing or unmatched records instead of presenting false certainty."
+          }
+        },
+        "feature_3": {
+          "type": "feature",
+          "settings": {
+            "heading": "MCP as an extension",
+            "body": "Compatible external AI tools can access supported governed capabilities through MCP, subject to permissions and configuration."
+          }
+        }
+      },
+      "block_order": [
+        "feature_0",
+        "feature_1",
+        "feature_2",
+        "feature_3"
+      ]
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
