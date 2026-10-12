@@ -1,11 +1,5 @@
 [
   {
-    "name": "theme_info",
-    "theme_name": "TraceKit Marketing",
-    "theme_version": "1.0.0",
-    "theme_author": "TraceKit"
-  },
-  {
     "name": "Brand",
     "settings": [
       {"type":"image_picker","id":"logo","label":"TraceKit full logo (dark background)"},
