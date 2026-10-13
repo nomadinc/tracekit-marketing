@@ -7,6 +7,16 @@
   <link rel="icon" type="image/svg+xml" href="{{ 'tracekit-favicon-symbol.svg' | asset_url }}">
   <link rel="canonical" href="{{ canonical_url }}">
   <title>{{ page_title | default: shop.name }}</title>
+  {% assign marketing_description = page_description | default: "TraceKit connects every click, customer, and dollar into one verified truth—so businesses understand what happened, why it happened, and what to do next." %}
+  <meta name="description" content="{{ marketing_description | escape }}">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ page_title | default: shop.name | escape }}">
+  <meta property="og:description" content="{{ marketing_description | escape }}">
+  <meta property="og:url" content="{{ canonical_url }}">
+  <meta property="og:site_name" content="{{ shop.name | escape }}">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{ page_title | default: shop.name | escape }}">
+  <meta name="twitter:description" content="{{ marketing_description | escape }}">
   {{ content_for_header }}
   {{ 'tracekit.css' | asset_url | stylesheet_tag }}
   <script src="{{ 'tracekit.js' | asset_url }}" defer></script>
