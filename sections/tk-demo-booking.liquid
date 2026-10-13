@@ -8,7 +8,7 @@
     <p class="tk-demo-disclosure">The inquiry and meeting booking are separate steps. We won't claim your meeting is booked until Calendly confirms it.</p>
   </div>
   <div class="tk-page-contact tk-demo-form-panel">
-    {% form 'contact', id: 'TraceKitDemoForm' %}
+    {% form 'contact', id: 'TraceKitDemoForm', return_to: 'back', data-shopify-captcha: 'true' %}
       {% if form.posted_successfully? %}
         <div class="tk-demo-success" role="status" data-calendly-base="https://calendly.com/anthony-trace-kit/30min">
           <span class="tk-demo-success-mark" aria-hidden="true">✓</span>
@@ -20,7 +20,8 @@
       {% else %}
         <h2>Book Your Personalized Demo</h2>
         <p class="tk-demo-form-lead">First, tell us a little about your business.</p>
-        {% if form.errors %}<div role="alert">{{ form.errors | default_errors }}</div>{% endif %}
+        {% if form.errors %}<div role="alert" data-demo-form-errors>{{ form.errors | default_errors }}</div>{% endif %}
+        <input type="hidden" name="contact[name]" id="tk-demo-name">
         <input type="hidden" name="contact[subject]" id="tk-demo-subject" value="TraceKit demo inquiry">
         <input type="hidden" name="contact[inquiry_type]" id="tk-demo-intent" value="General demo inquiry">
         <input type="hidden" name="contact[lead_source]" id="tk-demo-source" value="Website">
@@ -65,12 +66,34 @@
     if (email) url.searchParams.set('email', email);
     return url.toString();
   }
+  // Same-tab, short-lived prefill only. Never infer acceptance from URL parameters.
+  var storageKey = 'tracekit.demo.pending';
+  function clearPrefill() {
+    try { sessionStorage.removeItem(storageKey); } catch (e) {}
+  }
+  function readPrefill() {
+    try {
+      var saved = JSON.parse(sessionStorage.getItem(storageKey));
+      if (saved && saved.path === window.location.pathname &&
+          typeof saved.name === 'string' && typeof saved.email === 'string' &&
+          typeof saved.time === 'number' && Date.now() >= saved.time &&
+          Date.now() - saved.time < 15 * 60 * 1000) return saved;
+    } catch (e) {}
+    clearPrefill();
+    return null;
+  }
   var success = form.querySelector('.tk-demo-success');
   if (success) {
     var link = success.querySelector('.tk-demo-calendar-link');
-    if (link) link.href = calendly;
+    var saved = readPrefill();
+    clearPrefill();
+    var url = schedulingUrl(saved ? saved.name : '', saved ? saved.email : '');
+    if (link) link.href = url;
+    // Consume the pending attempt before navigating; refreshing success must not loop.
+    if (saved) window.location.replace(url);
     return;
   }
+  if (form.querySelector('[data-demo-form-errors]')) clearPrefill();
   var query = new URLSearchParams(window.location.search);
   var planValues = {starter:'Starter',growth:'Growth',scale:'Scale',agency:'Agency',enterprise:'Enterprise'};
   var selectedPlan = planValues[(query.get('plan') || '').toLowerCase()] || '';
@@ -86,64 +109,41 @@
     if (lead) lead.textContent = enterpriseInquiry ? 'Tell us about your requirements and we’ll discuss a custom plan.' : 'Tell us about your business. Your application is subject to review and approval.';
     form.querySelector('#tk-demo-intent').value = enterpriseInquiry ? 'Enterprise sales inquiry' : 'Founding access application';
     form.querySelector('#tk-demo-subject').value = enterpriseInquiry ? 'TraceKit Enterprise sales inquiry' : 'TraceKit founding access application';
-    form.querySelector('#tk-demo-source').value = 'Pricing page';
+    form.querySelector('#tk-demo-source').value = fromPricing ? 'Pricing page' : (query.get('source') || 'Website');
     planWrap.hidden = false;
     planSelect.disabled = false;
     planSelect.value = selectedPlan || 'Not selected';
   }
-  var button = form.querySelector('button[type="submit"]');
-  var error = form.querySelector('.tk-demo-submit-error');
-  var busy = false;
-  form.addEventListener('submit', async function (event) {
-    event.preventDefault();
-    if (busy || !form.reportValidity()) return;
-    busy = true;
-    if (error) { error.hidden = true; error.textContent = ''; }
-    if (button) { button.disabled = true; button.textContent = 'Submitting inquiry…'; }
-    var first = (form.querySelector('#tk-demo-first') || {}).value || '';
-    var last = (form.querySelector('#tk-demo-last') || {}).value || '';
-    var email = (form.querySelector('#tk-demo-email') || {}).value || '';
-    var data = new FormData(form);
-    data.set('contact[name]', [first.trim(), last.trim()].filter(Boolean).join(' '));
+  if (!founding && !enterpriseInquiry && query.get('source')) {
+    form.querySelector('#tk-demo-source').value = query.get('source');
+  }
+  // Populate native contact fields without replacing Shopify's submit/CAPTCHA lifecycle.
+  function updateName() {
+    var first = form.querySelector('#tk-demo-first').value.trim();
+    var last = form.querySelector('#tk-demo-last').value.trim();
+    form.querySelector('#tk-demo-name').value = [first, last].filter(Boolean).join(' ');
+  }
+  form.addEventListener('input', updateName);
+  updateName();
+  // Suppress rapid repeated user clicks, but never block Shopify's CAPTCHA resubmission.
+  var lastClick = 0;
+  form.querySelector('button[type="submit"]').addEventListener('click', function (event) {
+    var now = Date.now();
+    if (lastClick && now - lastClick < 1500) { event.preventDefault(); return; }
+    lastClick = now;
+  });
+  form.addEventListener('submit', function () {
+    if (!form.checkValidity()) return;
+    updateName();
     try {
-      var response = await fetch(form.action, {
-        method: 'POST',
-        body: data,
-        credentials: 'same-origin',
-        redirect: 'follow',
-        headers: { 'Accept': 'text/html' }
-      });
-      var html = await response.text();
-      var documentResult = new DOMParser().parseFromString(html, 'text/html');
-      var successMarker = documentResult.querySelector('.tk-demo-success');
-      var hasError = documentResult.querySelector('.errors, .form__message--error, [data-form-error]');
-      var responseUrl = new URL(response.url, window.location.href);
-      var shopifyConfirmed = responseUrl.searchParams.get('contact_posted') === 'true';
-      if (!response.ok || hasError || (!successMarker && !shopifyConfirmed)) {
-        throw new Error('Unable to confirm Shopify accepted this submission.');
-      }
-      var url = schedulingUrl([first.trim(),last.trim()].filter(Boolean).join(' '),email.trim());
-      form.innerHTML = '<div class="tk-demo-success" role="status"><h2>Inquiry received. Choose your demo time.</h2><p>Your inquiry was submitted successfully. Calendly will confirm the meeting separately.</p><a class="btn tk-demo-calendar-link" rel="noopener">Choose a demo time →</a></div>';
-      var link = form.querySelector('.tk-demo-calendar-link');
-      if (link) link.href = url;
-      window.location.assign(url);
+      sessionStorage.setItem(storageKey, JSON.stringify({
+        name: form.querySelector('#tk-demo-name').value,
+        email: form.querySelector('#tk-demo-email').value.trim(),
+        path: window.location.pathname,
+        time: Date.now()
+      }));
     } catch (e) {
-      if (error) {
-        error.textContent = 'We could not confirm the submission. Please check your inbox for a notification before trying again, or use the scheduling link below.';
-        error.hidden = false;
-      }
-      var fallback = form.querySelector('.tk-demo-calendar-fallback');
-      if (!fallback) {
-        fallback = document.createElement('a');
-        fallback.className = 'tk-demo-calendar-fallback';
-        fallback.href = calendly;
-        fallback.textContent = 'Open Calendly directly →';
-        fallback.rel = 'noopener';
-        if (error) error.insertAdjacentElement('afterend', fallback);
-      }
-    } finally {
-      busy = false;
-      if (button && button.isConnected) { button.disabled = false; button.textContent = 'Continue to Scheduling →'; }
+      // Storage restrictions must not prevent Shopify from accepting the inquiry.
     }
   });
 })();
