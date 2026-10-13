@@ -18,6 +18,8 @@
   <meta name="twitter:title" content="{{ page_title | default: shop.name | escape }}">
   <meta name="twitter:description" content="{{ marketing_description | escape }}">
   {{ content_for_header }}
+  <script src="{{ 'tk-consent.js' | asset_url }}"></script>
+  <script src="https://embeds.iubenda.com/widgets/1736b1da-d39e-4c6c-9d0a-308a6d6f5a5d.js"></script>
   {{ 'tracekit.css' | asset_url | stylesheet_tag }}
   <script src="{{ 'tracekit.js' | asset_url }}" defer></script>
 </head>
