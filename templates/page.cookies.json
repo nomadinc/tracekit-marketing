@@ -1,28 +1,20 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
-      "type": "tk-content-page",
+      "type": "tk-legal-policy",
       "settings": {
-        "eyebrow": "COOKIES",
-        "headline": "Cookie information.",
-        "intro": "This page is reserved for an approved cookie notice aligned with actual website behavior.",
-        "cta_text": "Book a Demo",
-        "note": "DRAFT — Cookie inventory and legal review required before publication.",
-        "show_contact": false,
-        "show_secondary_cta": false
-      },
-      "blocks": {
-        "feature_0": {
-          "type": "feature",
-          "settings": {
-            "heading": "Review required",
-            "body": "Document the cookies and similar technologies actually used, their purposes, and applicable choices."
-          }
-        }
-      },
-      "block_order": [
-        "feature_0"
-      ]
+        "title": "Cookie Policy",
+        "policy_url": "https://www.iubenda.com/privacy-policy/53678166/cookie-policy"
+      }
     }
   },
   "order": [

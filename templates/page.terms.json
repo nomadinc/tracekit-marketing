@@ -1,28 +1,20 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
-      "type": "tk-content-page",
+      "type": "tk-legal-policy",
       "settings": {
-        "eyebrow": "TERMS",
-        "headline": "Terms of service.",
-        "intro": "This page is reserved for TraceKit's approved terms of service.",
-        "cta_text": "Book a Demo",
-        "note": "DRAFT — This is not a binding terms-of-service document. Do not publish until approved legal content is supplied.",
-        "show_contact": false,
-        "show_secondary_cta": false
-      },
-      "blocks": {
-        "feature_0": {
-          "type": "feature",
-          "settings": {
-            "heading": "Legal review required",
-            "body": "Insert the reviewed agreement covering service terms, permitted use, disclaimers, and other applicable provisions."
-          }
-        }
-      },
-      "block_order": [
-        "feature_0"
-      ]
+        "title": "Terms & Conditions",
+        "policy_url": "https://www.iubenda.com/terms-and-conditions/53678166"
+      }
     }
   },
   "order": [

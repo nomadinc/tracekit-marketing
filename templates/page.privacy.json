@@ -1,28 +1,20 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
-      "type": "tk-content-page",
+      "type": "tk-legal-policy",
       "settings": {
-        "eyebrow": "PRIVACY",
-        "headline": "Privacy information.",
-        "intro": "This page is reserved for the approved TraceKit privacy policy.",
-        "cta_text": "Book a Demo",
-        "note": "DRAFT — This is not a privacy policy. Do not publish until approved legal content is supplied.",
-        "show_contact": false,
-        "show_secondary_cta": false
-      },
-      "blocks": {
-        "feature_0": {
-          "type": "feature",
-          "settings": {
-            "heading": "Policy review required",
-            "body": "Publish the legally reviewed privacy notice here, including applicable data practices, rights, and contact details."
-          }
-        }
-      },
-      "block_order": [
-        "feature_0"
-      ]
+        "title": "Privacy Policy",
+        "policy_url": "https://www.iubenda.com/privacy-policy/53678166"
+      }
     }
   },
   "order": [
