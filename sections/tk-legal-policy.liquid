@@ -12,6 +12,14 @@
     </div>
     <script>
       (function () {
+        // Native contents links do not open iubenda's mobile dialogs. Let the
+        // browser follow the anchor without the provider's dialog-close handler.
+        document.addEventListener('click', function (event) {
+          var link = event.target.closest && event.target.closest('.tk-legal-native a[href^="#"]');
+          if (!link) return;
+          var hash = link.getAttribute('href');
+          if (hash.length > 1 && document.getElementById(hash.slice(1))) event.stopImmediatePropagation();
+        }, true);
         function loadPolicy() {
           if (window.tkIubendaEmbedLoading || document.querySelector('script[src="https://cdn.iubenda.com/iubenda.js"], script[src="//cdn.iubenda.com/iubenda.js"]')) return;
           window.tkIubendaEmbedLoading = true;
